@@ -1,9 +1,9 @@
-import { UUID, Resource, ImageReferenceMap } from "./"
+import { UUID, Resource, ImageReferenceMap } from "./";
 
 export interface Devices {
-  ios?: number,
-  android?: number,
-  total?: number
+  ios?: number;
+  android?: number;
+  total?: number;
 }
 
 export interface PassBase extends Resource {
@@ -20,6 +20,4 @@ export interface PassBase extends Resource {
   devices: Devices;
 }
 
-export interface Pass extends PassBase {
-
-}
+export interface Pass extends PassBase {}

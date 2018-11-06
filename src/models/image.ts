@@ -1,4 +1,4 @@
-import {UUID} from "./index"
+import { UUID } from "./index";
 
 export interface TranslatedImageReference {
   [key: string]: UUID;
