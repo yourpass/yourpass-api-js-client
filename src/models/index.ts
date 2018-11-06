@@ -1,6 +1,6 @@
-export * from "./pass"
-export * from "./image"
-export * from "./token"
+export * from "./pass";
+export * from "./image";
+export * from "./token";
 
 export type UUID = string;
 

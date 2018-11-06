@@ -7,8 +7,8 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts}'",
-    "prettier": "prettier --config ./.prettierrc --write src/**/*.{ts}",
+    "lint": "tslint -c tslint.json 'src/**/**.{ts}'",
+    "prettier": "prettier --config .prettierrc --write src/**/*.ts test/**/*.js",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "author": "Michal Černy",

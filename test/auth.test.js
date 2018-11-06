@@ -16,14 +16,16 @@ describe("auth test", () => {
 
   it("get token should return token", (done) => {
     client.fetchToken(config.username, config.password).then((tr) => {
-      token = tr
+      token = tr;
       done();
     }, done);
   });
 
   it("get client create by acceessToken", (done) => {
-    const expired = new Date(new Date().getTime() - token.expire_in * 1000 - 2 * 1000)
-    const client2 = Client.createByAccessToken(token.access_token, expired )
+    const expired = new Date(
+      new Date().getTime() - token.expire_in * 1000 - 2 * 1000,
+    );
+    const client2 = Client.createByAccessToken(token.access_token, expired);
     client2.passList().then(() => {
       done();
     }, done);
