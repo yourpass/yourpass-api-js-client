@@ -1,0 +1,27 @@
+{
+  "name": "yourpass",
+  "version": "1.0.0",
+  "description": "YourpassJS client",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts}'",
+    "prettier": "prettier --config ./.prettierrc --write src/**/*.{ts}",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json"
+  },
+  "author": "Michal Černy",
+  "license": "MIT",
+  "devDependencies": {
+    "dotenv": "^6.0.0",
+    "jest": "^23.6.0",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.0"
+  },
+  "dependencies": {
+    "cross-fetch": "^2.2.2",
+    "save-buffer": "^1.1.0"
+  }
+}
