@@ -6,7 +6,7 @@ const DEFAULT_CORE_URL: string = "https://api.yourpass.eu";
 export * from "./models"
 
 export interface CoreApiOptions {
-  fetchInstance: Fetch;
+  fetch: Fetch;
   coreUrl?: string;
 }
 
@@ -17,16 +17,18 @@ function appendUrlParam(query: string, name: string, value: any): string {
 }
 
 export default class CoreApiClient {
-  private fetchInstance: Fetch;
+  private fetch: Fetch;
   private coreUrl: string;
 
   constructor(opts: CoreApiOptions) {
-    this.fetchInstance = opts.fetchInstance;
+    this.fetch = opts.fetch ;
     this.coreUrl = (opts && opts.coreUrl) || DEFAULT_CORE_URL;
   }
 
-  public fetch<T>(input: RequestInfo, init: RequestInit): Promise<T> {
-    return this.fetchInstance.fetch(input, init);
+  public request<T>(input: RequestInfo, init: RequestInit): Promise<T> {
+    return this.fetch(input, init).then((r: Response) => {
+      return r.json();
+    });;
   }
 
   public list<T>(resource: string, query?: Query): Promise<List<T>> {
@@ -40,40 +42,40 @@ export default class CoreApiClient {
       queryStr = `?${queryStr}`;
     }
 
-    return this.fetch(`${this.coreUrl}/v1/${resource}${queryStr}`, {
+    return this.request(`${this.coreUrl}/v1/${resource}${queryStr}`, {
       method: "GET",
     });
   }
 
   public get<T>(resource: string, id: UUID): Promise<T> {
-    return this.fetch(`${this.coreUrl}/v1/${resource}/${id}`, {
+    return this.request(`${this.coreUrl}/v1/${resource}/${id}`, {
       method: "GET",
     });
   }
 
   public create<T>(resource: string, object: any): Promise<T> {
-    return this.fetch(`${this.coreUrl}/v1/${resource}`, {
+    return this.request(`${this.coreUrl}/v1/${resource}`, {
       method: "POST",
       body: JSON.stringify(object),
     });
   }
 
   public update<T>(resource: string, id: UUID, object: any): Promise<T> {
-    return this.fetch(`${this.coreUrl}/v1/${resource}/${id}`, {
+    return this.request(`${this.coreUrl}/v1/${resource}/${id}`, {
       method: "PUT",
       body: JSON.stringify(object),
     });
   }
 
   public patch<T>(resource: string, id: UUID, object: any): Promise<T> {
-    return this.fetch(`${this.coreUrl}/v1/${resource}/${id}`, {
+    return this.request(`${this.coreUrl}/v1/${resource}/${id}`, {
       method: "PATCH",
       body: JSON.stringify(object),
     });
   }
 
   public delete<T>(resource: string, id: UUID): Promise<T> {
-    return this.fetch(`${this.coreUrl}/v1/${resource}/${id}`, {
+    return this.request(`${this.coreUrl}/v1/${resource}/${id}`, {
       method: "DELETE",
     });
   }

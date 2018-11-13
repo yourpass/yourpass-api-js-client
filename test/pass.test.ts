@@ -1,14 +1,14 @@
 import config from "./config";
-import { CredentialsClient } from "../src/fetch";
+import { CredentialsFetch } from "../src/fetch";
 import CoreApiClient, { Pass, List, UUID } from "../src/CoreApiClient";
 
-const fetchInstance = new CredentialsClient({
+const fetch = CredentialsFetch({
   ...config,
 });
 
 const testPassId: UUID = process.env.TEST_PASS_ID || "";
 
-const client = new CoreApiClient({ fetchInstance });
+const client = new CoreApiClient({ fetch });
 
 describe("pass test", () => {
   it("get", (done) => {
