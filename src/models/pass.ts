@@ -1,6 +1,6 @@
 import { UUID, Resource, ImageReferenceMap } from "./";
 
-export interface Devices {
+export interface PassDevices {
   ios?: number;
   android?: number;
   total?: number;
@@ -17,7 +17,8 @@ export interface PassBase extends Resource {
   lastUnregisterAt?: Date;
   templateId: UUID;
   projectId: UUID;
-  devices: Devices;
+  devices: PassDevices;
 }
 
-export interface Pass extends PassBase {}
+// export interface Pass extends PassBase {}
+export type Pass = PassBase;

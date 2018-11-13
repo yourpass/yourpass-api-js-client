@@ -1,3 +1,4 @@
-import Client from "./src/client";
+import CoreApiClient from "./src/CoreApiClient";
 export * from "./src/models/index";
-export default Client;
+export * from "./src/fetch/index";
+export default CoreApiClient;
