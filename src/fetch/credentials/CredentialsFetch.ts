@@ -1,8 +1,8 @@
 import btoa from "../../btoa";
 import fetch from "cross-fetch";
-import {Fetch} from "../Fetch";
+import { Fetch } from "../Fetch";
 
-import { CredentialsToken, AuthTokenResponse } from "./CredentialsToken"
+import { CredentialsToken, AuthTokenResponse } from "./CredentialsToken";
 
 const DEFAULT_HEADERS = {
   Accept: "application/json, application/x-www-form-urlencoded",
@@ -19,7 +19,7 @@ export interface CredentialsClientOptions {
   authUrl?: string;
 }
 
-export class CredentialsClient implements Fetch {
+export class CredentialsClientClass {
   private username?: string;
   private password?: string;
   private clientId?: string;
@@ -37,7 +37,10 @@ export class CredentialsClient implements Fetch {
     }
   }
 
-  public fetchToken(username: string, password: string): Promise<CredentialsToken> {
+  public fetchToken(
+    username: string,
+    password: string,
+  ): Promise<CredentialsToken> {
     const body = `grant_type=password&username=${username}&password=${password}`;
     const auth = "Basic " + btoa(this.clientId + ":" + this.clientSecret);
     const headers = {
@@ -50,22 +53,26 @@ export class CredentialsClient implements Fetch {
       headers,
     }).then((resp: any) => {
       if (resp.status === 200) {
-        return resp.json().then((t: AuthTokenResponse) => new CredentialsToken(t));
+        return resp
+          .json()
+          .then((t: AuthTokenResponse) => new CredentialsToken(t));
       }
       return { status: resp.status };
     });
   }
 
-  public fetch<T>(input: RequestInfo, init: RequestInit): Promise<T> {
-    return this.getToken().then((token) => {
-      const headers: any = init.headers || {};
+  public fetch(
+    input: RequestInfo,
+    init: RequestInit | undefined,
+  ): Promise<Response> {
+    return this.getToken().then ((token) => {
+      const headers: any = (init && init.headers) || {};
+      const newInit = init || {};
       if (token) {
         headers.Authorization = `${token.tokenType} ${token.accessToken}`;
       }
-      init.headers = headers;
-      return fetch(input, init).then((r: Response) => {
-        return r.json();
-      });
+      newInit.headers = headers;
+      return fetch(input, init);
     });
   }
 
@@ -77,6 +84,13 @@ export class CredentialsClient implements Fetch {
       return Promise.resolve(this.token);
     }
     return Promise.resolve(this.token);
+  }
+}
+
+export function CredentialsFetch(opts: CredentialsClientOptions): Fetch {
+  return (input: RequestInfo, init: RequestInit | undefined ): Promise<Response> => {
+    const instance = new CredentialsClientClass(opts);
+    return instance.fetch(input,init);
   }
 }
 

@@ -1,3 +1,4 @@
-export interface Fetch {
-  fetch<T>(input: RequestInfo, init: RequestInit): Promise<T>;
-}
+export type Fetch = (
+  input: RequestInfo,
+  init?: RequestInit,
+) => Promise<Response>;
