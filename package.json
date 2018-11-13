@@ -7,15 +7,18 @@
   "scripts": {
     "build": "tsc",
     "test": "jest",
-    "lint": "tslint -c tslint.json 'src/**/**.{ts}'",
-    "prettier": "prettier --config .prettierrc --write src/**/*.ts test/**/*.js",
+    "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
+    "prettier": "prettier --config .prettierrc --write src/**/*.ts test/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json"
   },
   "author": "Michal Černy",
   "license": "MIT",
   "devDependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/jest": "^23.3.9",
     "dotenv": "^6.0.0",
     "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "typescript": "^3.0.0"
