@@ -1,17 +1,17 @@
 import btoa from "../../btoa";
 import fetch from "cross-fetch";
 import { Fetch } from "../Fetch";
-
-import { CredentialsToken, AuthTokenResponse } from "./CredentialsToken";
+import { OAuthToken, OAuthTokenResponse } from "./OAuthToken";
+import { profiles, Enviroment, API_URL } from "../../constants/enviroments";
 
 const DEFAULT_HEADERS = {
   Accept: "application/json, application/x-www-form-urlencoded",
   "Content-Type": "application/x-www-form-urlencoded",
 };
 
-const DEFAULT_AUTH_URL: string = "https://api.yourpass.eu";
+const DEFAULT_AUTH_URL: string = profiles[Enviroment.PRODUCTION][API_URL.CORE];
 
-export interface CredentialsClientOptions {
+export interface OAuthOptions {
   clientId: string;
   clientSecret: string;
   username: string;
@@ -19,15 +19,15 @@ export interface CredentialsClientOptions {
   authUrl?: string;
 }
 
-export class CredentialsClientClass {
+export class OAuthFetchObject {
   private username?: string;
   private password?: string;
   private clientId?: string;
   private clientSecret?: string;
   private authUrl: string;
-  private token?: CredentialsToken;
+  private token?: OAuthToken;
 
-  constructor(opts?: CredentialsClientOptions) {
+  constructor(opts?: OAuthOptions) {
     this.authUrl = (opts && opts.authUrl) || DEFAULT_AUTH_URL;
     if (opts) {
       this.clientId = opts.clientId;
@@ -40,7 +40,7 @@ export class CredentialsClientClass {
   public fetchToken(
     username: string,
     password: string,
-  ): Promise<CredentialsToken> {
+  ): Promise<OAuthToken> {
     const body = `grant_type=password&username=${username}&password=${password}`;
     const auth = "Basic " + btoa(this.clientId + ":" + this.clientSecret);
     const headers = {
@@ -55,7 +55,7 @@ export class CredentialsClientClass {
       if (resp.status === 200) {
         return resp
           .json()
-          .then((t: AuthTokenResponse) => new CredentialsToken(t));
+          .then((t: OAuthTokenResponse) => new OAuthToken(t));
       }
       return { status: resp.status };
     });
@@ -76,7 +76,7 @@ export class CredentialsClientClass {
     });
   }
 
-  protected getToken(): Promise<CredentialsToken | undefined> {
+  protected getToken(): Promise<OAuthToken | undefined> {
     if (!this.token || (this.token && this.token.isExpired())) {
       if (this.username && this.password) {
         return this.fetchToken(this.username, this.password);
@@ -87,9 +87,9 @@ export class CredentialsClientClass {
   }
 }
 
-export function CredentialsFetch(opts: CredentialsClientOptions): Fetch {
+export function createOAuthFetch(opts: OAuthOptions): Fetch {
   return (input: RequestInfo, init: RequestInit | undefined ): Promise<Response> => {
-    const instance = new CredentialsClientClass(opts);
+    const instance = new OAuthFetchObject(opts);
     return instance.fetch(input,init);
   }
 }

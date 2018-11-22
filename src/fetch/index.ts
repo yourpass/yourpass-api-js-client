@@ -1,3 +1,3 @@
 export * from "./Fetch";
-export * from "./credentials/CredentialsFetch";
-export * from "./token/TokenFetch";
+export * from "./oauth";
+export * from "./headerToken";
