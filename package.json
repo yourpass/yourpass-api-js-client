@@ -1,6 +1,6 @@
 {
   "name": "yourpass-api-js-client",
-  "version": "0.0.0-alfa",
+  "version": "0.0.0-beta",
   "description": "YourpassJS client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
