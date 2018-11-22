@@ -1,24 +1,26 @@
-export interface AuthTokenResponse {
+export interface OAuthTokenResponse {
     access_token: string;
     expires_in: number;
     token_type: string;
   }
   
-  export interface AuthToken {
+  /*
+  export interface OAuthTokenI {
      accessToken: string;
      expiresIn: number;
      tokenType: string;
   }
+  */
   
   const REFRESH_INTERVAL = 120 * 1000;
   
-  export class CredentialsToken implements AuthToken {
+  export class OAuthToken {
     public accessToken: string;
     public expiresIn: number;
     public tokenType: string;
     private created: number;
   
-    constructor(opts: AuthTokenResponse) {
+    constructor(opts: OAuthTokenResponse) {
       this.accessToken = opts.access_token;
       this.expiresIn = opts.expires_in;
       this.tokenType = opts.token_type;

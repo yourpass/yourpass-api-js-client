@@ -1,4 +1,6 @@
-import CoreApiClient from "./src/CoreApiClient";
+import DefaultClient from "./src/DefaultClient";
+import CoreClient from "./src/CoreClient";
 export * from "./src/models/index";
 export * from "./src/fetch/index";
-export default CoreApiClient;
+export * from "./src/constants/enviroments"
+export default CoreClient;

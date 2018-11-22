@@ -1,12 +1,12 @@
 import { Fetch } from "../Fetch";
 import fetch from "cross-fetch";
 
-export interface TokenFetchOptions {
+export interface HeaderTokenFetchOptions {
   accessToken: string;
   tokenType?: string;
 }
 
-export function TokenFetch(opts: TokenFetchOptions): Fetch {
+export function createHeaderTokenFetch(opts: HeaderTokenFetchOptions): Fetch {
   const accessToken = opts.accessToken;
   const tokenType = opts.tokenType || "Bearer";
   return (input: RequestInfo, init: RequestInit | undefined ): Promise<Response> => {

@@ -1,20 +1,19 @@
 import config from "./config";
 import btoa from "../src/btoa";
-import { CredentialsToken } from "../src/fetch/credentials/CredentialsToken";
 import CoreApiClient, {
-  CredentialsFetch,
-  CredentialsClientClass,
-  TokenFetch,
+  createOAuthFetch,
   Fetch,
   List,
   PassBase,
+  OAuthToken, createHeaderTokenFetch, OAuthFetchObject 
 } from "../index";
+import { } from "../src/fetch";
 
-const credentialsFetchInstance = CredentialsFetch({
+const oauthFetchInstance = createOAuthFetch({
   ...config,
 });
 
-let credentialsToken: CredentialsToken | undefined;
+let credentialsToken: OAuthToken | undefined;
 
 describe("client credentials auth test", () => {
   it("get base64", () => {
@@ -22,9 +21,9 @@ describe("client credentials auth test", () => {
   });
 
   it("get token should return token", (done) => {
-    new CredentialsClientClass({ ...config })
+    new OAuthFetchObject({...config})
       .fetchToken(config.username, config.password)
-      .then((tr: CredentialsToken) => {
+      .then((tr: OAuthToken) => {
         credentialsToken = tr;
         done();
       }, done);
@@ -32,7 +31,7 @@ describe("client credentials auth test", () => {
 
   it("get pass list with fetch", (done) => {
     const client: CoreApiClient = new CoreApiClient({
-      fetch: credentialsFetchInstance,
+      fetch: oauthFetchInstance,
     });
     client.passList().then((l: List<PassBase>) => {
       done();
@@ -46,7 +45,7 @@ describe("client credentials auth test", () => {
 
 describe("token fetch", () => {
   it("get pass list with fetch", (done) => {
-    const tokenFetch: Fetch = TokenFetch({
+    const tokenFetch: Fetch = createHeaderTokenFetch({
       accessToken: (credentialsToken && credentialsToken.accessToken) || ``,
     });
     const client: CoreApiClient = new CoreApiClient({
