@@ -65,12 +65,42 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="yourpass-api-js-client">yourpass-api-js-client</h1>
-				<h2 id="development-configuration">Development configuration</h2>
-				<p>Create .env file with your test account: </p>
+				<p>This is draft of Yourpass API client for JS.</p>
+				<h2 id="installation">Installation</h2>
+				<pre><code class="language-shell">npm install client-oauth2 --save</code></pre>
+				<h2 id="usage">Usage</h2>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> CoreClient, { createOAuthFetch } <span class="hljs-keyword">from</span> <span class="hljs-string">"dist/index.js"</span>;
+
+<span class="hljs-keyword">const</span> fetch = createOAuthFetch({
+  <span class="hljs-attr">clientId</span>: <span class="hljs-string">"Your client ID"</span>,
+  <span class="hljs-attr">clientSecret</span>:<span class="hljs-string">"Your client secret"</span>,
+  <span class="hljs-attr">username</span>: <span class="hljs-string">"Your username"</span>,
+  <span class="hljs-attr">username</span>: <span class="hljs-string">"Your password"</span>,
+});
+
+<span class="hljs-keyword">const</span> client = <span class="hljs-keyword">new</span> CoreClient({ fetch });
+
+client.passList({ <span class="hljs-attr">limit</span>: <span class="hljs-number">3</span> }).then(<span class="hljs-function">(<span class="hljs-params">response</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(response)
+});</code></pre>
+				<h2 id="documentation">Documentation</h2>
+				<p>For more details please visit <a href="https://yourpass.github.io/yourpass-api-js-client/index.html">generated TypeDoc documentation</a>.</p>
+				<h2 id="development">Development</h2>
+				<h3 id="commands">Commands</h3>
+				<ul>
+					<li><code>npm run build</code> - compile typescript in to dist/ folder</li>
+					<li><code>npm run lint</code> - runs tslint check</li>
+					<li><code>npm run test</code> - runs test</li>
+					<li><code>npm run typedoc</code> - runs generate typedoc documentation</li>
+					<li><code>npm run prettier</code> - runs prettier to format code</li>
+				</ul>
+				<h3 id="configuration">Configuration</h3>
+				<p>Create .env file with your test account:</p>
 				<pre><code><span class="hljs-attr">TEST_USERNAME</span>=...
 <span class="hljs-attr">TEST_PASSWORD</span>=...
 <span class="hljs-attr">TEST_CLIENT_ID</span>=...
-<span class="hljs-attr">TEST_CLIENT_SECRET</span>=...</code></pre>
+<span class="hljs-attr">TEST_CLIENT_SECRET</span>=...</code></pre><h2 id="licence">Licence</h2>
+				<p>Apache 2.0</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
