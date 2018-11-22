@@ -1,4 +1,4 @@
-import { Fetch } from "../index";
+import { Fetch } from "../fetch/index";
 import { Enviroment } from "../constants/enviroments";
 
 export interface ClientOptions {
