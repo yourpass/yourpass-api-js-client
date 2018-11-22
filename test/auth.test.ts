@@ -1,5 +1,4 @@
 import config from "./config";
-import btoa from "../src/btoa";
 import CoreApiClient, {
   createOAuthFetch,
   Fetch,
@@ -16,9 +15,7 @@ const oauthFetchInstance = createOAuthFetch({
 let credentialsToken: OAuthToken | undefined;
 
 describe("client credentials auth test", () => {
-  it("get base64", () => {
-    btoa(config.clientId + ":" + config.clientSecret);
-  });
+
 
   it("get token should return token", (done) => {
     new OAuthFetchObject({...config})

@@ -1,4 +1,4 @@
-import btoa from "../../btoa";
+import btoa from "../../helpers/btoa";
 import fetch from "cross-fetch";
 import { Fetch } from "../Fetch";
 import { OAuthToken, OAuthTokenResponse } from "./OAuthToken";
