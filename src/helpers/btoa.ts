@@ -1,15 +1,9 @@
-import { Buffer } from "safe-buffer";
-
-const btoa = typeof Buffer === "function" ? btoaBuffer : window.btoa;
-
 /**
- * Support base64 in node like how it works in the browser.
- *
- * @param  {string} string
- * @return {string}
+ * TODO - find better implementation (universal) function to convert string into base64 for all platforms
+ * (React Native, NodeJs, Browser)
  */
-function btoaBuffer(str: string) {
-  return new Buffer(str).toString("base64");
-}
 
-export default btoa;
+export default (str: string) => {
+  global.Buffer = global.Buffer || require("buffer").Buffer;
+  return new Buffer(str, "binary").toString("base64");
+};

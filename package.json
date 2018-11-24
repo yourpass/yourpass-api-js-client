@@ -1,6 +1,6 @@
 {
   "name": "@yourpass/api-js-client",
-  "version": "0.0.0-beta",
+  "version": "0.0.0-beta1",
   "description": "YourpassJS client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,8 +16,8 @@
   "author": "Michal Černy",
   "license": "MIT",
   "dependencies": {
-    "cross-fetch": "^2.2.2",
-    "save-buffer": "^1.1.0"
+    "buffer": "^5.2.1",
+    "cross-fetch": "^2.2.2"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.0",
