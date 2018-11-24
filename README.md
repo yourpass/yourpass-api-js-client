@@ -5,7 +5,7 @@ This is draft of Yourpass API client for JS.
 ## Installation
 
 ```shell
-npm install client-oauth2 --save
+npm install @yourpass/api-js-client --save
 ```
 
 
