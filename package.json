@@ -10,7 +10,7 @@
     "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
     "prettier": "prettier --config .prettierrc --write src/**/*.ts test/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "typedoc": "typedoc --out ./docs/ index.ts --exclude test/**/*.ts",
+    "typedoc": "typedoc --theme markdown --out ./docs/ index.ts --exclude test/**/*.ts",
     "publish": "npm publish --access public"
   },
   "author": "Michal Černy",
@@ -28,6 +28,7 @@
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.15.0",
     "typedoc": "^0.13.0",
+    "typedoc-plugin-markdown": "^1.1.19",
     "typescript": "^3.0.0"
   }
 }
