@@ -15,6 +15,15 @@ const oauthFetchInstance = createOAuthFetch({
 
 let credentialsToken: OAuthToken | undefined;
 
+const checkError = (message: string, done: jest.DoneCallback) => {
+  return (err: Error) => {
+    if (err.message === message) {
+      return done();
+    }
+    done(`Should recieve: ${message}`);
+  };
+};
+
 describe("OAuth test", () => {
   it("get token should return token", (done) => {
     new OAuthFetchObject({ ...config })
@@ -24,15 +33,6 @@ describe("OAuth test", () => {
         done();
       }, done);
   });
-
-  const checkError = (message: string, done: jest.DoneCallback) => {
-    return (err: Error) => {
-      if (err.message === message) {
-        return done();
-      }
-      done(`Should recieve: ${message}`);
-    };
-  };
 
   it("get token with invalid clientId", (done: jest.DoneCallback) => {
     const c = { ...config };
@@ -66,7 +66,7 @@ describe("OAuth test", () => {
       .then(done, checkError("invalid_grant", done));
   });
 
-  it("get viewer by oauth", (done: jest.DoneCallback) => {
+  it("get viewer", (done: jest.DoneCallback) => {
     const client: CoreApiClient = new CoreApiClient({
       fetch: oauthFetchInstance,
     });
@@ -75,13 +75,22 @@ describe("OAuth test", () => {
     }, done);
   });
 
+  it("unauthorized get viewer", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.password = "";
+    const client: CoreApiClient = new CoreApiClient({
+      fetch: createOAuthFetch(c),
+    });
+
+    client.getViewer().then(done, checkError("Unauthorized", done));
+  });
+
   // TODO test expiration
   // TODO test refreshing token)
-  // TODO test fetch with header token
 });
 
 describe("header token fetch", () => {
-  it("get pass list with fetch", (done: jest.DoneCallback) => {
+  it("get viewer", (done: jest.DoneCallback) => {
     const tokenFetch: Fetch = createHeaderTokenFetch({
       accessToken: (credentialsToken && credentialsToken.accessToken) || ``,
     });
@@ -94,7 +103,14 @@ describe("header token fetch", () => {
     }, done);
   });
 
-  // TODO test expiration
-  // TODO test refreshing token)
-  // TODO test fetch with header token
+  it("unauthorized get viewer", (done: jest.DoneCallback) => {
+    const tokenFetch: Fetch = createHeaderTokenFetch({
+      accessToken: ``,
+    });
+    const client: CoreApiClient = new CoreApiClient({
+      fetch: tokenFetch,
+    });
+
+    client.getViewer().then(done, checkError("Unauthorized", done));
+  });
 });
