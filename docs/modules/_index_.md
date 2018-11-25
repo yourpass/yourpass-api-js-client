@@ -1,0 +1,8 @@
+[@yourpass/api-js-client](../README.md) > ["index"](../modules/_index_.md)
+
+# External module: "index"
+
+## Index
+
+---
+
