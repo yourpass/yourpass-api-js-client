@@ -1,16 +1,18 @@
 export interface OAuthTokenResponse {
-    access_token: string;
-    expires_in: number;
-    token_type: string;
+    access_token?: string;
+    expires_in?: number;
+    token_type?: string;
+    error?: string;
+    error_description?: string;
   }
   
-  /*
-  export interface OAuthTokenI {
+  
+  export interface OAuthTokenOptions {
      accessToken: string;
      expiresIn: number;
      tokenType: string;
   }
-  */
+
   
   const REFRESH_INTERVAL = 120 * 1000;
   
@@ -20,10 +22,10 @@ export interface OAuthTokenResponse {
     public tokenType: string;
     private created: number;
   
-    constructor(opts: OAuthTokenResponse) {
-      this.accessToken = opts.access_token;
-      this.expiresIn = opts.expires_in;
-      this.tokenType = opts.token_type;
+    constructor(opts: OAuthTokenOptions) {
+      this.accessToken = opts.accessToken;
+      this.expiresIn = opts.expiresIn;
+      this.tokenType = opts.tokenType;
       this.created = new Date().getTime();
     }
   

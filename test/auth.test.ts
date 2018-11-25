@@ -2,11 +2,12 @@ import config from "./config";
 import CoreApiClient, {
   createOAuthFetch,
   Fetch,
-  List,
-  PassBase,
-  OAuthToken, createHeaderTokenFetch, OAuthFetchObject 
+  OAuthToken,
+  createHeaderTokenFetch,
+  OAuthFetchObject,
 } from "../index";
-import { } from "../src/fetch";
+import {} from "../src/fetch";
+import { Viewer } from "../src/models";
 
 const oauthFetchInstance = createOAuthFetch({
   ...config,
@@ -14,11 +15,9 @@ const oauthFetchInstance = createOAuthFetch({
 
 let credentialsToken: OAuthToken | undefined;
 
-describe("client credentials auth test", () => {
-
-
+describe("OAuth test", () => {
   it("get token should return token", (done) => {
-    new OAuthFetchObject({...config})
+    new OAuthFetchObject({ ...config })
       .fetchToken(config.username, config.password)
       .then((tr: OAuthToken) => {
         credentialsToken = tr;
@@ -26,13 +25,54 @@ describe("client credentials auth test", () => {
       }, done);
   });
 
-  it("get pass list with fetch", (done) => {
+  const checkError = (message: string, done: jest.DoneCallback) => {
+    return (err: Error) => {
+      if (err.message === message) {
+        return done();
+      }
+      done(`Should recieve: ${message}`);
+    };
+  };
+
+  it("get token with invalid clientId", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.clientId = "invalid";
+    new OAuthFetchObject(c)
+      .fetchToken(c.username, c.password)
+      .then(done, checkError("server_error", done));
+  });
+
+  it("get token with invalid clientSecret", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.clientSecret = "invalid";
+    new OAuthFetchObject(c)
+      .fetchToken(c.username, c.password)
+      .then(done, checkError("unauthorized_client", done));
+  });
+
+  it("get token with invalid username", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.username = "invalid";
+    new OAuthFetchObject(c)
+      .fetchToken(c.username, c.password)
+      .then(done, checkError("invalid_grant", done));
+  });
+
+  it("get token with invalid password", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.password = "invalid";
+    new OAuthFetchObject(c)
+      .fetchToken(c.username, c.password)
+      .then(done, checkError("invalid_grant", done));
+  });
+
+  it("get viewer by oauth", (done: jest.DoneCallback) => {
     const client: CoreApiClient = new CoreApiClient({
       fetch: oauthFetchInstance,
     });
-    client.passList().then((l: List<PassBase>) => {
+    client.getViewer().then((v: Viewer) => {
       done();
-    });
+    }, done);
   });
 
   // TODO test expiration
@@ -40,8 +80,8 @@ describe("client credentials auth test", () => {
   // TODO test fetch with header token
 });
 
-describe("token fetch", () => {
-  it("get pass list with fetch", (done) => {
+describe("header token fetch", () => {
+  it("get pass list with fetch", (done: jest.DoneCallback) => {
     const tokenFetch: Fetch = createHeaderTokenFetch({
       accessToken: (credentialsToken && credentialsToken.accessToken) || ``,
     });
@@ -49,9 +89,9 @@ describe("token fetch", () => {
       fetch: tokenFetch,
     });
 
-    client.passList().then((l: List<PassBase>) => {
+    client.getViewer().then((v: Viewer) => {
       done();
-    });
+    }, done);
   });
 
   // TODO test expiration

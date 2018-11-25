@@ -37,10 +37,7 @@ export class OAuthFetchObject {
     }
   }
 
-  public fetchToken(
-    username: string,
-    password: string,
-  ): Promise<OAuthToken> {
+  public fetchToken(username: string, password: string): Promise<OAuthToken> {
     const body = `grant_type=password&username=${username}&password=${password}`;
     const auth = "Basic " + btoa(this.clientId + ":" + this.clientSecret);
     const headers = {
@@ -53,11 +50,18 @@ export class OAuthFetchObject {
       headers,
     }).then((resp: any) => {
       if (resp.status === 200) {
-        return resp
-          .json()
-          .then((t: OAuthTokenResponse) => new OAuthToken(t));
+        return resp.json().then((json: OAuthTokenResponse) => {
+          if (json.access_token && json.expires_in && json.token_type) {
+            return new OAuthToken({
+              accessToken: json.access_token,
+              expiresIn: json.expires_in,
+              tokenType: json.token_type,
+            });
+          }
+          return Promise.reject(new Error(json.error));
+        });
       }
-      return { status: resp.status };
+      return Promise.reject(new Error(resp.statusText));
     });
   }
 
@@ -65,7 +69,7 @@ export class OAuthFetchObject {
     input: RequestInfo,
     init: RequestInit | undefined,
   ): Promise<Response> {
-    return this.getToken().then ((token) => {
+    return this.getToken().then((token) => {
       const headers: any = (init && init.headers) || {};
       const newInit = init || {};
       if (token) {
@@ -88,9 +92,11 @@ export class OAuthFetchObject {
 }
 
 export function createOAuthFetch(opts: OAuthOptions): Fetch {
-  return (input: RequestInfo, init: RequestInit | undefined ): Promise<Response> => {
+  return (
+    input: RequestInfo,
+    init: RequestInit | undefined,
+  ): Promise<Response> => {
     const instance = new OAuthFetchObject(opts);
-    return instance.fetch(input,init);
-  }
+    return instance.fetch(input, init);
+  };
 }
-
