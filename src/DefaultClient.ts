@@ -43,7 +43,10 @@ export default class DefaultClient {
    */
   public fetch<T>(input: RequestInfo, init: RequestInit): Promise<T> {
     return this.fetchFunction(input, init).then((r: Response) => {
-      return r.json();
+      if (r.status < 400){
+        return r.json();
+      }
+      return Promise.reject(new Error(r.statusText))
     });
   }
 
