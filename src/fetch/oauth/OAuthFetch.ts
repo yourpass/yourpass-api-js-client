@@ -3,6 +3,7 @@ import fetch from "cross-fetch";
 import { Fetch } from "../Fetch";
 import { OAuthToken, OAuthTokenResponse } from "./OAuthToken";
 import { profiles, Enviroment, API_URL } from "../../constants/enviroments";
+import { HTTPError } from "../../helpers/httpError";
 
 const DEFAULT_HEADERS = {
   Accept: "application/json, application/x-www-form-urlencoded",
@@ -61,7 +62,7 @@ export class OAuthFetchObject {
           return Promise.reject(new Error(json.error));
         });
       }
-      return Promise.reject(new Error(resp.statusText));
+      return Promise.reject(new HTTPError(resp));
     });
   }
 

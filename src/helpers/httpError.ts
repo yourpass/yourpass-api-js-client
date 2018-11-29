@@ -1,10 +1,8 @@
 export class HTTPError extends Error {
-  public statusCode: number;
-  public statusText: string;
+  public response: Response;
 
   constructor(response: Response) {
-    super(`Status: ${response.status} StatusText:${response.statusText}`);
-    this.statusCode = response.status;
-    this.statusText = response.statusText;
+    super(`${response.statusText || response.status}`);
+    this.response = response;
   }
 }
