@@ -34,6 +34,23 @@ describe("OAuth test", () => {
       }, done);
   });
 
+  it("get token with empty username", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.username = "";
+    new OAuthFetchObject(c)
+      .fetchToken(c.username, c.password)
+      .then(done, checkError("server_error", done));
+  });
+
+  it("get token with empty password", (done: jest.DoneCallback) => {
+    const c = { ...config };
+    c.password = "";
+    new OAuthFetchObject(c)
+      .fetchToken(c.username, c.password)
+      .then(done, checkError("server_error", done));
+  });
+
+
   it("get token with invalid clientId", (done: jest.DoneCallback) => {
     const c = { ...config };
     c.clientId = "invalid";
