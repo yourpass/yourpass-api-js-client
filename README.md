@@ -30,7 +30,7 @@ client.passList({ limit: 3 }).then((response) => {
 
 ## Documentation
 
-For more details please visit [generated TypeDoc documentation](https://yourpass.github.io/yourpass-api-js-client/index.html).
+For more details please visit ["generated TypeDoc documentation"](docs/).
 
 ## Development
 

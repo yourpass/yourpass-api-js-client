@@ -32,7 +32,7 @@
 
 ▸ **generateAccessRights**(viewer: *[ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md)*): `any`
 
-*Defined in [src/models/viewer.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L22)*
+*Defined in [src/models/viewer.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L22)*
 
 **Parameters:**
 
@@ -52,7 +52,7 @@ ___
 
 **Rights**: *`object`*
 
-*Defined in [src/models/viewer.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L3)*
+*Defined in [src/models/viewer.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L3)*
 
 <a id="rights.image_manage"></a>
 
@@ -60,7 +60,7 @@ ___
 
 **● IMAGE_MANAGE**: *`number`* = 2048
 
-*Defined in [src/models/viewer.ts:18](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L18)*
+*Defined in [src/models/viewer.ts:18](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L18)*
 
 ___
 <a id="rights.pass_create"></a>
@@ -69,7 +69,7 @@ ___
 
 **● PASS_CREATE**: *`number`* = 1
 
-*Defined in [src/models/viewer.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L7)*
+*Defined in [src/models/viewer.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L7)*
 
 ___
 <a id="rights.pass_delete"></a>
@@ -78,7 +78,7 @@ ___
 
 **● PASS_DELETE**: *`number`* = 8
 
-*Defined in [src/models/viewer.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L10)*
+*Defined in [src/models/viewer.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L10)*
 
 ___
 <a id="rights.pass_read"></a>
@@ -87,7 +87,7 @@ ___
 
 **● PASS_READ**: *`number`* = 2
 
-*Defined in [src/models/viewer.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L8)*
+*Defined in [src/models/viewer.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L8)*
 
 ___
 <a id="rights.pass_update"></a>
@@ -96,7 +96,7 @@ ___
 
 **● PASS_UPDATE**: *`number`* = 4
 
-*Defined in [src/models/viewer.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L9)*
+*Defined in [src/models/viewer.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L9)*
 
 ___
 <a id="rights.project_access"></a>
@@ -105,7 +105,7 @@ ___
 
 **● PROJECT_ACCESS**: *`number`* = 0
 
-*Defined in [src/models/viewer.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L6)*
+*Defined in [src/models/viewer.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L6)*
 
 ___
 <a id="rights.stamp_manage"></a>
@@ -114,7 +114,7 @@ ___
 
 **● STAMP_MANAGE**: *`number`* = 4096
 
-*Defined in [src/models/viewer.ts:19](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L19)*
+*Defined in [src/models/viewer.ts:19](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L19)*
 
 ___
 <a id="rights.template_create"></a>
@@ -123,7 +123,7 @@ ___
 
 **● TEMPLATE_CREATE**: *`number`* = 16
 
-*Defined in [src/models/viewer.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L11)*
+*Defined in [src/models/viewer.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L11)*
 
 ___
 <a id="rights.template_delete"></a>
@@ -132,7 +132,7 @@ ___
 
 **● TEMPLATE_DELETE**: *`number`* = 128
 
-*Defined in [src/models/viewer.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L14)*
+*Defined in [src/models/viewer.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L14)*
 
 ___
 <a id="rights.template_read"></a>
@@ -141,7 +141,7 @@ ___
 
 **● TEMPLATE_READ**: *`number`* = 32
 
-*Defined in [src/models/viewer.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L12)*
+*Defined in [src/models/viewer.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L12)*
 
 ___
 <a id="rights.template_update"></a>
@@ -150,7 +150,7 @@ ___
 
 **● TEMPLATE_UPDATE**: *`number`* = 64
 
-*Defined in [src/models/viewer.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L13)*
+*Defined in [src/models/viewer.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L13)*
 
 ___
 <a id="rights.ticket_accounting"></a>
@@ -159,7 +159,7 @@ ___
 
 **● TICKET_ACCOUNTING**: *`number`* = 256
 
-*Defined in [src/models/viewer.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L15)*
+*Defined in [src/models/viewer.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L15)*
 
 ___
 <a id="rights.ticket_entry"></a>
@@ -168,7 +168,7 @@ ___
 
 **● TICKET_ENTRY**: *`number`* = 512
 
-*Defined in [src/models/viewer.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L16)*
+*Defined in [src/models/viewer.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L16)*
 
 ___
 <a id="rights.ticket_eshop_read"></a>
@@ -177,7 +177,7 @@ ___
 
 **● TICKET_ESHOP_READ**: *`number`* = 1024
 
-*Defined in [src/models/viewer.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/7027c81/src/models/viewer.ts#L17)*
+*Defined in [src/models/viewer.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/viewer.ts#L17)*
 
 ___
 
