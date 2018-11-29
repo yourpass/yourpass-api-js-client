@@ -1,6 +1,6 @@
 {
   "name": "@yourpass/api-js-client",
-  "version": "0.0.0-beta.2",
+  "version": "0.0.0-beta.3",
   "description": "YourpassJS client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,7 +10,7 @@
     "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
     "prettier": "prettier --config .prettierrc --write src/**/*.ts test/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "typedoc": "typedoc --theme markdown --out ./docs/ index.ts --exclude test/**/*.ts",
+    "typedoc": "typedoc --theme markdown --out ./docs/ index.ts --exclude test/**/*.ts --readme none",
     "publish": "npm publish --access public"
   },
   "author": "Michal Černy",
