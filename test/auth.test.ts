@@ -8,6 +8,7 @@ import CoreApiClient, {
 } from "../index";
 import {} from "../src/fetch";
 import { Viewer } from "../src/models";
+import { HTTPError } from "../src/helpers/httpError";
 
 const oauthFetchInstance = createOAuthFetch({
   ...config,
@@ -16,7 +17,14 @@ const oauthFetchInstance = createOAuthFetch({
 let credentialsToken: OAuthToken | undefined;
 
 const checkError = (message: string, done: jest.DoneCallback) => {
-  return (err: Error) => {
+  return (err: any) => {
+    if (typeof err.response !== "undefined") {
+      const httpError: HTTPError = err;
+      if (httpError.response.statusText === message) {
+        return done();
+      }
+    }
+
     if (err.message === message) {
       return done();
     }
@@ -49,7 +57,6 @@ describe("OAuth test", () => {
       .fetchToken(c.username, c.password)
       .then(done, checkError("server_error", done));
   });
-
 
   it("get token with invalid clientId", (done: jest.DoneCallback) => {
     const c = { ...config };
