@@ -9,6 +9,7 @@ import {
 } from "./models";
 import { Enviroment, API_URL, profiles } from "./constants/enviroments";
 import { appendUrlParam } from "./helpers/url";
+import {HTTPError} from "./helpers/httpError";
 
 /**
  * A class representing a basic client, which contains:
@@ -46,7 +47,7 @@ export default class DefaultClient {
       if (r.status < 400){
         return r.json();
       }
-      return Promise.reject(new Error(r.statusText))
+      return Promise.reject(new HTTPError(r))
     });
   }
 
