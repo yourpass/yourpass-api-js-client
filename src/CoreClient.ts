@@ -1,4 +1,13 @@
-import { UUID, Pass, PassBase, List, ImageReferenceMap, Query } from "./models";
+import {
+  UUID,
+  Pass,
+  PassBase,
+  List,
+  ImageReferenceMap,
+  Query,
+  TemplateBase,
+  Template,
+} from "./models";
 import DefaultClient from "./DefaultClient";
 import { API_URL } from "./constants/enviroments";
 
@@ -31,7 +40,7 @@ export default class CoreClient extends DefaultClient {
   }
 
   /**
-   * Patch pass 
+   * Patch pass
    * @param id
    * @param pass
    */
@@ -49,7 +58,7 @@ export default class CoreClient extends DefaultClient {
 
   /**
    * Update pass
-   * @param pass 
+   * @param pass
    */
   public passUpdate(pass: {
     id: UUID;
@@ -68,9 +77,25 @@ export default class CoreClient extends DefaultClient {
 
   /**
    *  Delete Pass
-   * @param pass 
+   * @param pass
    */
   public passDelete(pass: UUID): Promise<Pass> {
     return this.delete<Pass>(API_URL.CORE, "pass", pass);
+  }
+
+  /**
+   * List of templates
+   * @param query
+   */
+  public templateList(query?: Query): Promise<List<TemplateBase>> {
+    return this.list<TemplateBase>(API_URL.CORE, "pass", query);
+  }
+
+  /**
+   * Read template instance with ID
+   * @param id pass id
+   */
+  public templateGet(id: UUID): Promise<Template> {
+    return this.get<Template>(API_URL.CORE, "template", id);
   }
 }
