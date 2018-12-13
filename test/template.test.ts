@@ -4,24 +4,23 @@ const fetch = createOAuthFetch({
   ...config,
 });
 
-let testPassId: UUID;
+let testTemplateId: UUID;
 
 const client = new CoreClient({ fetch });
 
-describe("pass test", () => {
-
+describe("tenplate test", () => {
 
   it("list", (done) => {
     client.templateList().then((response: List<TemplateBase>) => {
-      testPassId = response.data[0].id
+      testTemplateId = response.data[0].id
       done();
     }, done);
   });
 
   it("get", (done) => {
-    client.templateGet(testPassId).then((response: Template) => {
+    client.templateGet(testTemplateId).then((response: Template) => {
       if (response){
-        done();
+        return done();
       }
     }, done);
   });

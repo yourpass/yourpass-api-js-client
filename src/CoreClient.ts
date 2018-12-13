@@ -88,7 +88,7 @@ export default class CoreClient extends DefaultClient {
    * @param query
    */
   public templateList(query?: Query): Promise<List<TemplateBase>> {
-    return this.list<TemplateBase>(API_URL.CORE, "pass", query);
+    return this.list<TemplateBase>(API_URL.CORE, "template", query);
   }
 
   /**

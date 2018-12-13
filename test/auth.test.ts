@@ -47,7 +47,7 @@ describe("OAuth test", () => {
     c.username = "";
     new OAuthFetchObject(c)
       .fetchToken(c.username, c.password)
-      .then(done, checkError("server_error", done));
+      .then(done, checkError("invalid_grant", done));
   });
 
   it("get token with empty password", (done: jest.DoneCallback) => {
@@ -55,7 +55,7 @@ describe("OAuth test", () => {
     c.password = "";
     new OAuthFetchObject(c)
       .fetchToken(c.username, c.password)
-      .then(done, checkError("server_error", done));
+      .then(done, checkError("invalid_grant", done));
   });
 
   it("get token with invalid clientId", (done: jest.DoneCallback) => {
