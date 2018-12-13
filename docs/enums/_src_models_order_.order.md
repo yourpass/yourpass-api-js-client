@@ -19,7 +19,7 @@
 
 **ASC**:  = "asc"
 
-*Defined in [src/models/order.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/order.ts#L2)*
+*Defined in [src/models/order.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/order.ts#L2)*
 
 ___
 <a id="desc"></a>
@@ -28,7 +28,7 @@ ___
 
 **DESC**:  = "desc"
 
-*Defined in [src/models/order.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/order.ts#L3)*
+*Defined in [src/models/order.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/order.ts#L3)*
 
 ___
 

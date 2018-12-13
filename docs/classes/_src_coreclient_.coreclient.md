@@ -37,6 +37,8 @@ A class representing a core client. It prvides interface to work with Passes, Im
 * [passPatch](_src_coreclient_.coreclient.md#passpatch)
 * [passUpdate](_src_coreclient_.coreclient.md#passupdate)
 * [patch](_src_coreclient_.coreclient.md#patch)
+* [templateGet](_src_coreclient_.coreclient.md#templateget)
+* [templateList](_src_coreclient_.coreclient.md#templatelist)
 * [update](_src_coreclient_.coreclient.md#update)
 
 ---
@@ -51,7 +53,7 @@ A class representing a core client. It prvides interface to work with Passes, Im
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[constructor](_src_defaultclient_.defaultclient.md#constructor)*
 
-*Defined in [src/DefaultClient.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L24)*
+*Defined in [src/DefaultClient.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L24)*
 
 Create a DefaultClient.
 
@@ -75,7 +77,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[enviroment](_src_defaultclient_.defaultclient.md#enviroment)*
 
-*Defined in [src/DefaultClient.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L24)*
+*Defined in [src/DefaultClient.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L24)*
 
 enviroment for which was client created
 
@@ -88,7 +90,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[fetchFunction](_src_defaultclient_.defaultclient.md#fetchfunction)*
 
-*Defined in [src/DefaultClient.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L22)*
+*Defined in [src/DefaultClient.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L22)*
 
 fetchFunction function for call http request
 
@@ -104,7 +106,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[create](_src_defaultclient_.defaultclient.md#create)*
 
-*Defined in [src/DefaultClient.ts:89](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L89)*
+*Defined in [src/DefaultClient.ts:89](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L89)*
 
 Create new instance of resource on selected api
 
@@ -130,7 +132,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[delete](_src_defaultclient_.defaultclient.md#delete)*
 
-*Defined in [src/DefaultClient.ts:129](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L129)*
+*Defined in [src/DefaultClient.ts:129](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L129)*
 
 Delete instance with id of resource on selected api
 
@@ -156,7 +158,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[fetch](_src_defaultclient_.defaultclient.md#fetch)*
 
-*Defined in [src/DefaultClient.ts:45](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L45)*
+*Defined in [src/DefaultClient.ts:45](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L45)*
 
 Common http request function
 
@@ -181,7 +183,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[get](_src_defaultclient_.defaultclient.md#get)*
 
-*Defined in [src/DefaultClient.ts:80](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L80)*
+*Defined in [src/DefaultClient.ts:80](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L80)*
 
 Get instance of resource on selected api for specified id
 
@@ -207,7 +209,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[getURL](_src_defaultclient_.defaultclient.md#geturl)*
 
-*Defined in [src/DefaultClient.ts:38](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L38)*
+*Defined in [src/DefaultClient.ts:38](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L38)*
 
 Returns base url for api and current enviroment
 
@@ -228,7 +230,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[getViewer](_src_defaultclient_.defaultclient.md#getviewer)*
 
-*Defined in [src/DefaultClient.ts:138](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L138)*
+*Defined in [src/DefaultClient.ts:138](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L138)*
 
 Returns current user object (viewer) instance
 
@@ -243,7 +245,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[list](_src_defaultclient_.defaultclient.md#list)*
 
-*Defined in [src/DefaultClient.ts:57](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L57)*
+*Defined in [src/DefaultClient.ts:57](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L57)*
 
 List of resource on selected api for specified query
 
@@ -267,7 +269,7 @@ ___
 
 ▸ **passCreate**(pass: *`object`*): `Promise`<[Pass](../modules/_src_models_pass_.md#pass)>
 
-*Defined in [src/CoreClient.ts:25](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/CoreClient.ts#L25)*
+*Defined in [src/CoreClient.ts:34](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L34)*
 
 Create new pass
 
@@ -292,7 +294,7 @@ ___
 
 ▸ **passDelete**(pass: *[UUID](../modules/_src_models_uuid_.md#uuid)*): `Promise`<[Pass](../modules/_src_models_pass_.md#pass)>
 
-*Defined in [src/CoreClient.ts:73](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/CoreClient.ts#L73)*
+*Defined in [src/CoreClient.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L82)*
 
 Delete Pass
 
@@ -311,7 +313,7 @@ ___
 
 ▸ **passGet**(id: *[UUID](../modules/_src_models_uuid_.md#uuid)*): `Promise`<[Pass](../modules/_src_models_pass_.md#pass)>
 
-*Defined in [src/CoreClient.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/CoreClient.ts#L17)*
+*Defined in [src/CoreClient.ts:26](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L26)*
 
 Read pass instance with ID
 
@@ -330,7 +332,7 @@ ___
 
 ▸ **passList**(query?: *[Query](../interfaces/_src_models_query_.query.md)*): `Promise`<[List](../interfaces/_src_models_list_.list.md)<[PassBase](../interfaces/_src_models_pass_.passbase.md)>>
 
-*Defined in [src/CoreClient.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/CoreClient.ts#L9)*
+*Defined in [src/CoreClient.ts:18](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L18)*
 
 **Parameters:**
 
@@ -347,7 +349,7 @@ ___
 
 ▸ **passPatch**(id: *[UUID](../modules/_src_models_uuid_.md#uuid)*, pass: *`object`*): `Promise`<[Pass](../modules/_src_models_pass_.md#pass)>
 
-*Defined in [src/CoreClient.ts:38](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/CoreClient.ts#L38)*
+*Defined in [src/CoreClient.ts:47](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L47)*
 
 Patch pass
 
@@ -373,7 +375,7 @@ ___
 
 ▸ **passUpdate**(pass: *`object`*): `Promise`<[Pass](../modules/_src_models_pass_.md#pass)>
 
-*Defined in [src/CoreClient.ts:54](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/CoreClient.ts#L54)*
+*Defined in [src/CoreClient.ts:63](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L63)*
 
 Update pass
 
@@ -400,7 +402,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[patch](_src_defaultclient_.defaultclient.md#patch)*
 
-*Defined in [src/DefaultClient.ts:114](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L114)*
+*Defined in [src/DefaultClient.ts:114](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L114)*
 
 Patch instance with id of resource on selected api
 
@@ -419,6 +421,44 @@ Patch instance with id of resource on selected api
 **Returns:** `Promise`<`T`>
 
 ___
+<a id="templateget"></a>
+
+###  templateGet
+
+▸ **templateGet**(id: *[UUID](../modules/_src_models_uuid_.md#uuid)*): `Promise`<[Template](../interfaces/_src_models_template_.template.md)>
+
+*Defined in [src/CoreClient.ts:98](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L98)*
+
+Read template instance with ID
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| id | [UUID](../modules/_src_models_uuid_.md#uuid) |  pass id |
+
+**Returns:** `Promise`<[Template](../interfaces/_src_models_template_.template.md)>
+
+___
+<a id="templatelist"></a>
+
+###  templateList
+
+▸ **templateList**(query?: *[Query](../interfaces/_src_models_query_.query.md)*): `Promise`<[List](../interfaces/_src_models_list_.list.md)<[TemplateBase](../interfaces/_src_models_template_.templatebase.md)>>
+
+*Defined in [src/CoreClient.ts:90](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/CoreClient.ts#L90)*
+
+List of templates
+
+**Parameters:**
+
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| `Optional` query | [Query](../interfaces/_src_models_query_.query.md) |   |
+
+**Returns:** `Promise`<[List](../interfaces/_src_models_list_.list.md)<[TemplateBase](../interfaces/_src_models_template_.templatebase.md)>>
+
+___
 <a id="update"></a>
 
 ###  update
@@ -427,7 +467,7 @@ ___
 
 *Inherited from [DefaultClient](_src_defaultclient_.defaultclient.md).[update](_src_defaultclient_.defaultclient.md#update)*
 
-*Defined in [src/DefaultClient.ts:99](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/DefaultClient.ts#L99)*
+*Defined in [src/DefaultClient.ts:99](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/DefaultClient.ts#L99)*
 
 Update instance with id of resource on selected api
 

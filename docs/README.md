@@ -26,6 +26,7 @@
 * ["src/models/pass"](modules/_src_models_pass_.md)
 * ["src/models/query"](modules/_src_models_query_.md)
 * ["src/models/resource"](modules/_src_models_resource_.md)
+* ["src/models/template"](modules/_src_models_template_.md)
 * ["src/models/uuid"](modules/_src_models_uuid_.md)
 * ["src/models/viewer"](modules/_src_models_viewer_.md)
 * ["src/models/where"](modules/_src_models_where_.md)
