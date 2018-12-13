@@ -4,5 +4,5 @@ export interface Resource {
   id: UUID;
   createdAt: Date;
   updatedAt: Date;
-  deletedAt?: Date;
+  deletedAt: Date | null;
 }

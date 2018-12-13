@@ -6,5 +6,6 @@ export * from "./pass";
 export * from "./image";
 export * from "./resource";
 export * from "./list";
-export * from "./clientOptions"
-export * from "./viewer"
+export * from "./clientOptions";
+export * from "./viewer";
+export * from "./template";
