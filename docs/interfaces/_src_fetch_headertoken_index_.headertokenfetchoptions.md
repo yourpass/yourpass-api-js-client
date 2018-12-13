@@ -23,7 +23,7 @@
 
 **● accessToken**: *`string`*
 
-*Defined in [src/fetch/headerToken/index.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/fetch/headerToken/index.ts#L5)*
+*Defined in [src/fetch/headerToken/index.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/fetch/headerToken/index.ts#L5)*
 
 ___
 <a id="tokentype"></a>
@@ -33,7 +33,7 @@ ___
 **● tokenType**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/headerToken/index.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/fetch/headerToken/index.ts#L6)*
+*Defined in [src/fetch/headerToken/index.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/fetch/headerToken/index.ts#L6)*
 
 ___
 

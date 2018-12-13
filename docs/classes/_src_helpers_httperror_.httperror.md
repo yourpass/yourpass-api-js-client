@@ -32,7 +32,7 @@
 
 ⊕ **new HTTPError**(response: *`Response`*): [HTTPError](_src_helpers_httperror_.httperror.md)
 
-*Defined in [src/helpers/httpError.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/helpers/httpError.ts#L2)*
+*Defined in [src/helpers/httpError.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/helpers/httpError.ts#L2)*
 
 **Parameters:**
 
@@ -74,7 +74,7 @@ ___
 
 **● response**: *`Response`*
 
-*Defined in [src/helpers/httpError.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/helpers/httpError.ts#L2)*
+*Defined in [src/helpers/httpError.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/helpers/httpError.ts#L2)*
 
 ___
 <a id="stack"></a>

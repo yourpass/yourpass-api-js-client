@@ -25,7 +25,7 @@
 **● android**: * `undefined` &#124; `number`
 *
 
-*Defined in [src/models/pass.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/pass.ts#L5)*
+*Defined in [src/models/pass.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/pass.ts#L5)*
 
 ___
 <a id="ios"></a>
@@ -35,7 +35,7 @@ ___
 **● ios**: * `undefined` &#124; `number`
 *
 
-*Defined in [src/models/pass.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/pass.ts#L4)*
+*Defined in [src/models/pass.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/pass.ts#L4)*
 
 ___
 <a id="total"></a>
@@ -45,7 +45,7 @@ ___
 **● total**: * `undefined` &#124; `number`
 *
 
-*Defined in [src/models/pass.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/models/pass.ts#L6)*
+*Defined in [src/models/pass.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/pass.ts#L6)*
 
 ___
 

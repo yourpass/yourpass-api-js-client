@@ -21,7 +21,7 @@
 
 **BETA**:  = "beta"
 
-*Defined in [src/constants/enviroments.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/constants/enviroments.ts#L4)*
+*Defined in [src/constants/enviroments.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/constants/enviroments.ts#L4)*
 
 ___
 <a id="development"></a>
@@ -30,7 +30,7 @@ ___
 
 **DEVELOPMENT**:  = "development"
 
-*Defined in [src/constants/enviroments.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/constants/enviroments.ts#L5)*
+*Defined in [src/constants/enviroments.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/constants/enviroments.ts#L5)*
 
 ___
 <a id="play"></a>
@@ -39,7 +39,7 @@ ___
 
 **PLAY**:  = "play"
 
-*Defined in [src/constants/enviroments.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/constants/enviroments.ts#L3)*
+*Defined in [src/constants/enviroments.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/constants/enviroments.ts#L3)*
 
 ___
 <a id="production"></a>
@@ -48,7 +48,7 @@ ___
 
 **PRODUCTION**:  = "production"
 
-*Defined in [src/constants/enviroments.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/c41a8ac/src/constants/enviroments.ts#L2)*
+*Defined in [src/constants/enviroments.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/constants/enviroments.ts#L2)*
 
 ___
 
