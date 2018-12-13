@@ -87,7 +87,6 @@ export class Viewer implements ViewerOptions {
     this.name = viewer.name;
     this.isAdmin = viewer.isAdmin;
     this.accessRights = generateAccessRights(viewer);
-
     this.hasTicketEntryAccess = this.hasTicketEntryAccess.bind(this);
     this.hasTicketEshopAccess = this.hasTicketEshopAccess.bind(this);
     this.hasTicketAccess = this.hasTicketAccess.bind(this);
@@ -108,5 +107,10 @@ export class Viewer implements ViewerOptions {
 
   public hasStampCardAccess() {
     return this.isAdmin || this.accessRights.STAMP_MANAGE;
+  }
+
+  public hasAnyProject() {
+    // TODO maybe use this.accessRights.PROJECT_ACCESS
+    return this.isAdmin || Object.keys(this.projects).length > 0;
   }
 }
