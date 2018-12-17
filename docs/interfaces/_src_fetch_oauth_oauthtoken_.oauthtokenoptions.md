@@ -24,7 +24,7 @@
 
 **● accessToken**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/fetch/oauth/OAuthToken.ts#L11)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/fetch/oauth/OAuthToken.ts#L11)*
 
 ___
 <a id="expiresin"></a>
@@ -33,7 +33,7 @@ ___
 
 **● expiresIn**: *`number`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/fetch/oauth/OAuthToken.ts#L12)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/fetch/oauth/OAuthToken.ts#L12)*
 
 ___
 <a id="tokentype"></a>
@@ -42,7 +42,7 @@ ___
 
 **● tokenType**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/fetch/oauth/OAuthToken.ts#L13)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/fetch/oauth/OAuthToken.ts#L13)*
 
 ___
 

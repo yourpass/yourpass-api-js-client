@@ -86,6 +86,7 @@ export class Viewer implements ViewerOptions {
     this.email = viewer.email;
     this.name = viewer.name;
     this.isAdmin = viewer.isAdmin;
+    this.projects = viewer.projects;
     this.accessRights = generateAccessRights(viewer);
     this.hasTicketEntryAccess = this.hasTicketEntryAccess.bind(this);
     this.hasTicketEshopAccess = this.hasTicketEshopAccess.bind(this);
@@ -110,7 +111,6 @@ export class Viewer implements ViewerOptions {
   }
 
   public hasAnyProject() {
-    // TODO maybe use this.accessRights.PROJECT_ACCESS
-    return this.isAdmin || Object.keys(this.projects).length > 0;
+    return this.isAdmin || this.accessRights.PROJECT_ACCESS;
   }
 }
