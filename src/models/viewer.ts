@@ -92,6 +92,7 @@ export class Viewer implements ViewerOptions {
     this.hasTicketEshopAccess = this.hasTicketEshopAccess.bind(this);
     this.hasTicketAccess = this.hasTicketAccess.bind(this);
     this.hasStampCardAccess = this.hasStampCardAccess.bind(this);
+    this.hasAnyProject = this.hasAnyProject.bind(this);
   }
 
   public hasTicketEntryAccess() {
