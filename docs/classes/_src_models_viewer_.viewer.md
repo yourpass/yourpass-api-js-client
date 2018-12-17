@@ -43,7 +43,7 @@
 
 ⊕ **new Viewer**(viewer: *`any`*): [Viewer](_src_models_viewer_.viewer.md)
 
-*Defined in [src/models/viewer.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L82)*
+*Defined in [src/models/viewer.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L82)*
 
 **Parameters:**
 
@@ -63,7 +63,7 @@ ___
 
 **● accessRights**: *[AccessRights](../interfaces/_src_models_viewer_.accessrights.md)*
 
-*Defined in [src/models/viewer.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L82)*
+*Defined in [src/models/viewer.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L82)*
 
 ___
 <a id="email"></a>
@@ -74,7 +74,7 @@ ___
 
 *Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[email](../interfaces/_src_models_viewer_.vieweroptions.md#email)*
 
-*Defined in [src/models/viewer.ts:77](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L77)*
+*Defined in [src/models/viewer.ts:77](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L77)*
 
 ___
 <a id="id"></a>
@@ -85,7 +85,7 @@ ___
 
 *Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[id](../interfaces/_src_models_viewer_.vieweroptions.md#id)*
 
-*Defined in [src/models/viewer.ts:76](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L76)*
+*Defined in [src/models/viewer.ts:76](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L76)*
 
 ___
 <a id="isadmin"></a>
@@ -96,7 +96,7 @@ ___
 
 *Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[isAdmin](../interfaces/_src_models_viewer_.vieweroptions.md#isadmin)*
 
-*Defined in [src/models/viewer.ts:79](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L79)*
+*Defined in [src/models/viewer.ts:79](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L79)*
 
 ___
 <a id="name"></a>
@@ -107,7 +107,7 @@ ___
 
 *Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[name](../interfaces/_src_models_viewer_.vieweroptions.md#name)*
 
-*Defined in [src/models/viewer.ts:78](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L78)*
+*Defined in [src/models/viewer.ts:78](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L78)*
 
 ___
 <a id="projects"></a>
@@ -118,7 +118,7 @@ ___
 
 *Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[projects](../interfaces/_src_models_viewer_.vieweroptions.md#projects)*
 
-*Defined in [src/models/viewer.ts:80](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L80)*
+*Defined in [src/models/viewer.ts:80](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L80)*
 
 ___
 
@@ -128,11 +128,11 @@ ___
 
 ###  hasAnyProject
 
-▸ **hasAnyProject**(): `boolean`
+▸ **hasAnyProject**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
-*Defined in [src/models/viewer.ts:112](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L112)*
+*Defined in [src/models/viewer.ts:113](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L113)*
 
-**Returns:** `boolean`
+**Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
 ___
 <a id="hasstampcardaccess"></a>
@@ -141,7 +141,7 @@ ___
 
 ▸ **hasStampCardAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
-*Defined in [src/models/viewer.ts:108](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L108)*
+*Defined in [src/models/viewer.ts:109](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L109)*
 
 **Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
@@ -152,7 +152,7 @@ ___
 
 ▸ **hasTicketAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
-*Defined in [src/models/viewer.ts:104](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L104)*
+*Defined in [src/models/viewer.ts:105](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L105)*
 
 **Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
@@ -163,7 +163,7 @@ ___
 
 ▸ **hasTicketEntryAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
-*Defined in [src/models/viewer.ts:96](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L96)*
+*Defined in [src/models/viewer.ts:97](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L97)*
 
 **Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
@@ -174,7 +174,7 @@ ___
 
 ▸ **hasTicketEshopAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 
-*Defined in [src/models/viewer.ts:100](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/models/viewer.ts#L100)*
+*Defined in [src/models/viewer.ts:101](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L101)*
 
 **Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
 

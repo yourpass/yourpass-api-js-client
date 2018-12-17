@@ -19,7 +19,7 @@
 
 **AUTH**:  = "AUTH_API_URL"
 
-*Defined in [src/constants/enviroments.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/constants/enviroments.ts#L10)*
+*Defined in [src/constants/enviroments.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/constants/enviroments.ts#L10)*
 
 ___
 <a id="core"></a>
@@ -28,7 +28,7 @@ ___
 
 **CORE**:  = "CORE_API_URL"
 
-*Defined in [src/constants/enviroments.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/eaf5d7e/src/constants/enviroments.ts#L9)*
+*Defined in [src/constants/enviroments.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/constants/enviroments.ts#L9)*
 
 ___
 
