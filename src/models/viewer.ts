@@ -35,15 +35,32 @@ export interface ViewerOptions {
   isAdmin: boolean;
   projects: Projects;
 }
-
-export class Viewer implements ViewerOptions {
+/**
+ * class Viewer represents signed user
+ */
+export class Viewer {
+  /**
+   * ID of signed user
+   */
   public id: string;
+  /**
+   * Email address of signed user
+   */
   public email: string;
+  /**
+   * Name address of signed user
+   */
   public name: string;
+  /**
+   * isAdmin says if signed user is system administrator
+   */
   public isAdmin: boolean;
+  /**
+   * projects is map of projectId and number represents permission
+   */
   public projects: Projects;
 
-  constructor(viewer: any) {
+  constructor(viewer: ViewerOptions) {
     this.id = viewer.id;
     this.email = viewer.email;
     this.name = viewer.name;
@@ -51,27 +68,37 @@ export class Viewer implements ViewerOptions {
     this.projects = viewer.projects;
     this.hasPermision = this.hasPermision.bind(this);
     this.hasPermisionOnProject = this.hasPermisionOnProject.bind(this);
-
   }
 
-  public hasPermision(rights: Permission) {
+  /**
+   * hasPermision function says if user has {permission} on any project
+   * @param permission
+   */
+  public hasPermision(permission: Permission): boolean {
     if (this.isAdmin) {
       return true;
     }
     for (const key in this.projects) {
-      if (this.hasPermisionOnProject(key, rights)) {
+      if (this.hasPermisionOnProject(key, permission)) {
         return true;
       }
     }
     return false;
   }
 
-  public hasPermisionOnProject(projectId: UUID, rights: Permission) {
+  /**
+   * hasPermisionOnProject function says if user has {permission} on project with id {projectId}
+   * @param permission
+   * @param projectId
+   */
+  public hasPermisionOnProject(
+    projectId: UUID,
+    permission: Permission,
+  ): boolean {
     return (
       this.isAdmin ||
       (this.projects[projectId] !== undefined &&
-        match(this.projects[projectId], rights))
+        match(this.projects[projectId], permission))
     );
   }
-
 }
