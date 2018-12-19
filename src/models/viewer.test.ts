@@ -14,25 +14,25 @@ describe("Viewer model test", () => {
       },
     });
 
-    expect(viewer.hasPermision(Permission.PROJECT_ACCESS)).toEqual(true);
-    expect(viewer.hasPermision(Permission.PASS_READ)).toEqual(true);
+    expect(viewer.hasPermission(Permission.PROJECT_ACCESS)).toEqual(true);
+    expect(viewer.hasPermission(Permission.PASS_READ)).toEqual(true);
     expect(
-      viewer.hasPermisionOnProject("test", Permission.PROJECT_ACCESS),
+      viewer.hasPermissionOnProject("test", Permission.PROJECT_ACCESS),
     ).toEqual(true);
-    expect(viewer.hasPermisionOnProject("test2", Permission.PASS_READ)).toEqual(
-      true,
-    );
-    expect(viewer.hasPermisionOnProject("test3", Permission.PASS_READ)).toEqual(
-      true,
-    );
-
-    expect(viewer.hasPermision(Permission.IMAGE_MANAGE)).toEqual(false);
-    expect(viewer.hasPermision(Permission.IMAGE_MANAGE)).toEqual(false);
     expect(
-      viewer.hasPermisionOnProject("test", Permission.IMAGE_MANAGE),
+      viewer.hasPermissionOnProject("test2", Permission.PASS_READ),
+    ).toEqual(true);
+    expect(
+      viewer.hasPermissionOnProject("test3", Permission.PASS_READ),
+    ).toEqual(true);
+
+    expect(viewer.hasPermission(Permission.IMAGE_MANAGE)).toEqual(false);
+    expect(viewer.hasPermission(Permission.IMAGE_MANAGE)).toEqual(false);
+    expect(
+      viewer.hasPermissionOnProject("test", Permission.IMAGE_MANAGE),
     ).toEqual(false);
     expect(
-      viewer.hasPermisionOnProject("test2", Permission.IMAGE_MANAGE),
+      viewer.hasPermissionOnProject("test2", Permission.IMAGE_MANAGE),
     ).toEqual(false);
   });
 });

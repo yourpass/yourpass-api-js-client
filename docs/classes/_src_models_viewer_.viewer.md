@@ -24,8 +24,8 @@ class Viewer represents signed user
 
 ### Methods
 
-* [hasPermision](_src_models_viewer_.viewer.md#haspermision)
-* [hasPermisionOnProject](_src_models_viewer_.viewer.md#haspermisiononproject)
+* [hasPermission](_src_models_viewer_.viewer.md#haspermission)
+* [hasPermissionOnProject](_src_models_viewer_.viewer.md#haspermissiononproject)
 
 ---
 
@@ -37,7 +37,7 @@ class Viewer represents signed user
 
 ⊕ **new Viewer**(viewer: *[ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md)*): [Viewer](_src_models_viewer_.viewer.md)
 
-*Defined in [src/models/viewer.ts:61](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L61)*
+*Defined in [src/models/viewer.ts:61](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L61)*
 
 **Parameters:**
 
@@ -57,7 +57,7 @@ ___
 
 **● email**: *`string`*
 
-*Defined in [src/models/viewer.ts:49](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L49)*
+*Defined in [src/models/viewer.ts:49](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L49)*
 
 Email address of signed user
 
@@ -68,7 +68,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [src/models/viewer.ts:45](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L45)*
+*Defined in [src/models/viewer.ts:45](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L45)*
 
 ID of signed user
 
@@ -79,7 +79,7 @@ ___
 
 **● isAdmin**: *`boolean`*
 
-*Defined in [src/models/viewer.ts:57](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L57)*
+*Defined in [src/models/viewer.ts:57](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L57)*
 
 isAdmin says if signed user is system administrator
 
@@ -90,7 +90,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [src/models/viewer.ts:53](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L53)*
+*Defined in [src/models/viewer.ts:53](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L53)*
 
 Name address of signed user
 
@@ -101,7 +101,7 @@ ___
 
 **● projects**: *[Projects](../interfaces/_src_models_viewer_.projects.md)*
 
-*Defined in [src/models/viewer.ts:61](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L61)*
+*Defined in [src/models/viewer.ts:61](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L61)*
 
 projects is map of projectId and number represents permission
 
@@ -109,13 +109,13 @@ ___
 
 ## Methods
 
-<a id="haspermision"></a>
+<a id="haspermission"></a>
 
-###  hasPermision
+###  hasPermission
 
-▸ **hasPermision**(permission: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
+▸ **hasPermission**(permission: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
 
-*Defined in [src/models/viewer.ts:77](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L77)*
+*Defined in [src/models/viewer.ts:77](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L77)*
 
 hasPermision function says if user has {permission} on any project
 
@@ -128,13 +128,13 @@ hasPermision function says if user has {permission} on any project
 **Returns:** `boolean`
 
 ___
-<a id="haspermisiononproject"></a>
+<a id="haspermissiononproject"></a>
 
-###  hasPermisionOnProject
+###  hasPermissionOnProject
 
-▸ **hasPermisionOnProject**(projectId: *[UUID](../modules/_src_models_uuid_.md#uuid)*, permission: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
+▸ **hasPermissionOnProject**(projectId: *[UUID](../modules/_src_models_uuid_.md#uuid)*, permission: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
 
-*Defined in [src/models/viewer.ts:94](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/viewer.ts#L94)*
+*Defined in [src/models/viewer.ts:94](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/models/viewer.ts#L94)*
 
 hasPermisionOnProject function says if user has {permission} on project with id {projectId}
 
