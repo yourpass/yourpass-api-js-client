@@ -1,67 +1,31 @@
 import { UUID } from "./uuid";
 
-export const Rights: {
-  [key: string]: number;
-} = {
-  PROJECT_ACCESS: 0,
-  PASS_CREATE: 1,
-  PASS_READ: 2,
-  PASS_UPDATE: 4,
-  PASS_DELETE: 8,
-  TEMPLATE_CREATE: 16,
-  TEMPLATE_READ: 32,
-  TEMPLATE_UPDATE: 64,
-  TEMPLATE_DELETE: 128,
-  TICKET_ACCOUNTING: 256,
-  TICKET_ENTRY: 512,
-  TICKET_ESHOP_READ: 1024,
-  IMAGE_MANAGE: 2048,
-  STAMP_MANAGE: 4096,
-};
+export enum Permission {
+  PROJECT_ACCESS = 0,
+  PASS_CREATE = 1,
+  PASS_READ = 2,
+  PASS_UPDATE = 4,
+  PASS_DELETE = 8,
+  TEMPLATE_CREATE = 16,
+  TEMPLATE_READ = 32,
+  TEMPLATE_UPDATE = 64,
+  TEMPLATE_DELETE = 128,
+  TICKET_ACCOUNTING = 256,
+  TICKET_ENTRY = 512,
+  TICKET_ESHOP_READ = 1024,
+  IMAGE_MANAGE = 2048,
+  STAMP_MANAGE = 4096,
+}
 
-function generateAccessRights(viewer: ViewerOptions) {
-  const result: any = {};
-  if (viewer.projects && !viewer.isAdmin) {
-    Object.keys(viewer.projects).map((projectId: UUID) => {
-      if (Object.prototype.hasOwnProperty.call(viewer.projects, projectId)) {
-        const project = viewer.projects[projectId];
-        if (!result[projectId]) {
-          result[projectId] = {};
-        }
-
-        Object.keys(Rights).map((key: string) => {
-          if (viewer.isAdmin) {
-            result[projectId][key] = true;
-            result[key] = true;
-          } else {
-            const value: number = Rights[key];
-            /* tslint:disable:no-bitwise */
-            const shifted = project & value;
-            /* tslint:enable:no-bitwise */
-            const checked = shifted === value;
-            result[projectId][key] = checked;
-
-            if (checked) {
-              result[key] = true;
-            } else if (typeof result[key] === "undefined") {
-              result[key] = false;
-            }
-          }
-          return null;
-        });
-      }
-      return null;
-    });
-  }
-  return result;
+function match(current: number, rights: Permission) {
+  /* tslint:disable:no-bitwise */
+  const shifted = current & rights;
+  /* tslint:enable:no-bitwise */
+  return shifted === rights;
 }
 
 interface Projects {
   [key: string]: number;
-}
-
-interface AccessRights {
-  [key: string]: boolean | AccessRights;
 }
 
 export interface ViewerOptions {
@@ -77,9 +41,7 @@ export class Viewer implements ViewerOptions {
   public email: string;
   public name: string;
   public isAdmin: boolean;
-  public projects: any;
-  // TODO  add type
-  public accessRights: AccessRights;
+  public projects: Projects;
 
   constructor(viewer: any) {
     this.id = viewer.id;
@@ -87,31 +49,29 @@ export class Viewer implements ViewerOptions {
     this.name = viewer.name;
     this.isAdmin = viewer.isAdmin;
     this.projects = viewer.projects;
-    this.accessRights = generateAccessRights(viewer);
-    this.hasTicketEntryAccess = this.hasTicketEntryAccess.bind(this);
-    this.hasTicketEshopAccess = this.hasTicketEshopAccess.bind(this);
-    this.hasTicketAccess = this.hasTicketAccess.bind(this);
-    this.hasStampCardAccess = this.hasStampCardAccess.bind(this);
-    this.hasAnyProject = this.hasAnyProject.bind(this);
+    this.hasPermision = this.hasPermision.bind(this);
+    this.hasPermisionOnProject = this.hasPermisionOnProject.bind(this);
+
   }
 
-  public hasTicketEntryAccess() {
-    return this.isAdmin || this.accessRights.TICKET_ENTRY;
+  public hasPermision(rights: Permission) {
+    if (this.isAdmin) {
+      return true;
+    }
+    for (const key in this.projects) {
+      if (this.hasPermisionOnProject(key, rights)) {
+        return true;
+      }
+    }
+    return false;
   }
 
-  public hasTicketEshopAccess() {
-    return this.isAdmin || this.accessRights.TICKET_ESHOP_READ;
+  public hasPermisionOnProject(projectId: UUID, rights: Permission) {
+    return (
+      this.isAdmin ||
+      (this.projects[projectId] !== undefined &&
+        match(this.projects[projectId], rights))
+    );
   }
 
-  public hasTicketAccess() {
-    return this.isAdmin || this.hasTicketEntryAccess();
-  }
-
-  public hasStampCardAccess() {
-    return this.isAdmin || this.accessRights.STAMP_MANAGE;
-  }
-
-  public hasAnyProject() {
-    return this.isAdmin || this.accessRights.PROJECT_ACCESS;
-  }
 }
