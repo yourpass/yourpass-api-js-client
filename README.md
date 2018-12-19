@@ -41,6 +41,7 @@ For more details please visit ["generated TypeDoc documentation"](docs/).
 - `npm run test` - runs test
 - `npm run typedoc` - runs generate typedoc documentation
 - `npm run prettier` - runs prettier to format code
+- `npm publish --access public` - publish in npm registry
 
 ### Configuration
 
