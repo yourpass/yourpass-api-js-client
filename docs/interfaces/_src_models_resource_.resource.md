@@ -29,7 +29,7 @@
 
 **● createdAt**: *`Date`*
 
-*Defined in [src/models/resource.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/resource.ts#L5)*
+*Defined in [src/models/resource.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/resource.ts#L5)*
 
 ___
 <a id="deletedat"></a>
@@ -39,7 +39,7 @@ ___
 **● deletedAt**: * `Date` &#124; `null`
 *
 
-*Defined in [src/models/resource.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/resource.ts#L7)*
+*Defined in [src/models/resource.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/resource.ts#L7)*
 
 ___
 <a id="id"></a>
@@ -48,7 +48,7 @@ ___
 
 **● id**: *[UUID](../modules/_src_models_uuid_.md#uuid)*
 
-*Defined in [src/models/resource.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/resource.ts#L4)*
+*Defined in [src/models/resource.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/resource.ts#L4)*
 
 ___
 <a id="updatedat"></a>
@@ -57,7 +57,7 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Defined in [src/models/resource.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/resource.ts#L6)*
+*Defined in [src/models/resource.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/resource.ts#L6)*
 
 ___
 

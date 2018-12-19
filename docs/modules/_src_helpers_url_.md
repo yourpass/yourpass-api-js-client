@@ -18,7 +18,7 @@
 
 ▸ **appendUrlParam**(query: *`string`*, name: *`string`*, value: *`any`*): `string`
 
-*Defined in [src/helpers/url.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/helpers/url.ts#L8)*
+*Defined in [src/helpers/url.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/helpers/url.ts#L8)*
 
 Helper function which append new parameter in to pasted query.
 
