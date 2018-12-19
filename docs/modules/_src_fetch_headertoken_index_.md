@@ -22,7 +22,7 @@
 
 ▸ **createHeaderTokenFetch**(opts: *[HeaderTokenFetchOptions](../interfaces/_src_fetch_headertoken_index_.headertokenfetchoptions.md)*): [Fetch](_src_fetch_fetch_.md#fetch)
 
-*Defined in [src/fetch/headerToken/index.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/fetch/headerToken/index.ts#L9)*
+*Defined in [src/fetch/headerToken/index.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/fetch/headerToken/index.ts#L9)*
 
 **Parameters:**
 

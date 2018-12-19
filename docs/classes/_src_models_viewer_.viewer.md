@@ -2,13 +2,11 @@
 
 # Class: Viewer
 
+class Viewer represents signed user
+
 ## Hierarchy
 
 **Viewer**
-
-## Implements
-
-* [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md)
 
 ## Index
 
@@ -18,7 +16,6 @@
 
 ### Properties
 
-* [accessRights](_src_models_viewer_.viewer.md#accessrights)
 * [email](_src_models_viewer_.viewer.md#email)
 * [id](_src_models_viewer_.viewer.md#id)
 * [isAdmin](_src_models_viewer_.viewer.md#isadmin)
@@ -27,11 +24,8 @@
 
 ### Methods
 
-* [hasAnyProject](_src_models_viewer_.viewer.md#hasanyproject)
-* [hasStampCardAccess](_src_models_viewer_.viewer.md#hasstampcardaccess)
-* [hasTicketAccess](_src_models_viewer_.viewer.md#hasticketaccess)
-* [hasTicketEntryAccess](_src_models_viewer_.viewer.md#hasticketentryaccess)
-* [hasTicketEshopAccess](_src_models_viewer_.viewer.md#hasticketeshopaccess)
+* [hasPermision](_src_models_viewer_.viewer.md#haspermision)
+* [hasPermisionOnProject](_src_models_viewer_.viewer.md#haspermisiononproject)
 
 ---
 
@@ -41,15 +35,15 @@
 
 ###  constructor
 
-⊕ **new Viewer**(viewer: *`any`*): [Viewer](_src_models_viewer_.viewer.md)
+⊕ **new Viewer**(viewer: *[ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md)*): [Viewer](_src_models_viewer_.viewer.md)
 
-*Defined in [src/models/viewer.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L82)*
+*Defined in [src/models/viewer.ts:61](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L61)*
 
 **Parameters:**
 
 | Name | Type |
 | ------ | ------ |
-| viewer | `any` |
+| viewer | [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md) |
 
 **Returns:** [Viewer](_src_models_viewer_.viewer.md)
 
@@ -57,24 +51,15 @@ ___
 
 ## Properties
 
-<a id="accessrights"></a>
-
-###  accessRights
-
-**● accessRights**: *[AccessRights](../interfaces/_src_models_viewer_.accessrights.md)*
-
-*Defined in [src/models/viewer.ts:82](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L82)*
-
-___
 <a id="email"></a>
 
 ###  email
 
 **● email**: *`string`*
 
-*Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[email](../interfaces/_src_models_viewer_.vieweroptions.md#email)*
+*Defined in [src/models/viewer.ts:49](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L49)*
 
-*Defined in [src/models/viewer.ts:77](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L77)*
+Email address of signed user
 
 ___
 <a id="id"></a>
@@ -83,9 +68,9 @@ ___
 
 **● id**: *`string`*
 
-*Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[id](../interfaces/_src_models_viewer_.vieweroptions.md#id)*
+*Defined in [src/models/viewer.ts:45](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L45)*
 
-*Defined in [src/models/viewer.ts:76](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L76)*
+ID of signed user
 
 ___
 <a id="isadmin"></a>
@@ -94,9 +79,9 @@ ___
 
 **● isAdmin**: *`boolean`*
 
-*Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[isAdmin](../interfaces/_src_models_viewer_.vieweroptions.md#isadmin)*
+*Defined in [src/models/viewer.ts:57](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L57)*
 
-*Defined in [src/models/viewer.ts:79](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L79)*
+isAdmin says if signed user is system administrator
 
 ___
 <a id="name"></a>
@@ -105,78 +90,62 @@ ___
 
 **● name**: *`string`*
 
-*Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[name](../interfaces/_src_models_viewer_.vieweroptions.md#name)*
+*Defined in [src/models/viewer.ts:53](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L53)*
 
-*Defined in [src/models/viewer.ts:78](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L78)*
+Name address of signed user
 
 ___
 <a id="projects"></a>
 
 ###  projects
 
-**● projects**: *`any`*
+**● projects**: *[Projects](../interfaces/_src_models_viewer_.projects.md)*
 
-*Implementation of [ViewerOptions](../interfaces/_src_models_viewer_.vieweroptions.md).[projects](../interfaces/_src_models_viewer_.vieweroptions.md#projects)*
+*Defined in [src/models/viewer.ts:61](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L61)*
 
-*Defined in [src/models/viewer.ts:80](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L80)*
+projects is map of projectId and number represents permission
 
 ___
 
 ## Methods
 
-<a id="hasanyproject"></a>
+<a id="haspermision"></a>
 
-###  hasAnyProject
+###  hasPermision
 
-▸ **hasAnyProject**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
+▸ **hasPermision**(permission: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
 
-*Defined in [src/models/viewer.ts:113](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L113)*
+*Defined in [src/models/viewer.ts:77](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L77)*
 
-**Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
+hasPermision function says if user has {permission} on any project
 
-___
-<a id="hasstampcardaccess"></a>
+**Parameters:**
 
-###  hasStampCardAccess
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| permission | [Permission](../enums/_src_models_viewer_.permission.md) |   |
 
-▸ **hasStampCardAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
-
-*Defined in [src/models/viewer.ts:109](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L109)*
-
-**Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
+**Returns:** `boolean`
 
 ___
-<a id="hasticketaccess"></a>
+<a id="haspermisiononproject"></a>
 
-###  hasTicketAccess
+###  hasPermisionOnProject
 
-▸ **hasTicketAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
+▸ **hasPermisionOnProject**(projectId: *[UUID](../modules/_src_models_uuid_.md#uuid)*, permission: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
 
-*Defined in [src/models/viewer.ts:105](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L105)*
+*Defined in [src/models/viewer.ts:94](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L94)*
 
-**Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
+hasPermisionOnProject function says if user has {permission} on project with id {projectId}
 
-___
-<a id="hasticketentryaccess"></a>
+**Parameters:**
 
-###  hasTicketEntryAccess
+| Name | Type | Description |
+| ------ | ------ | ------ |
+| projectId | [UUID](../modules/_src_models_uuid_.md#uuid) |   |
+| permission | [Permission](../enums/_src_models_viewer_.permission.md) |  \- |
 
-▸ **hasTicketEntryAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
-
-*Defined in [src/models/viewer.ts:97](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L97)*
-
-**Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
-
-___
-<a id="hasticketeshopaccess"></a>
-
-###  hasTicketEshopAccess
-
-▸ **hasTicketEshopAccess**():  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
-
-*Defined in [src/models/viewer.ts:101](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L101)*
-
-**Returns:**  `false` &#124; `true` &#124; [AccessRights](../interfaces/_src_models_viewer_.accessrights.md)
+**Returns:** `boolean`
 
 ___
 
