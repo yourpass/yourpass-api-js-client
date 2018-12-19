@@ -18,7 +18,7 @@
 
 **Ƭ Where**: *`any`*
 
-*Defined in [src/models/where.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/where.ts#L2)*
+*Defined in [src/models/where.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/ae9c408/src/models/where.ts#L2)*
 
 ___
 
