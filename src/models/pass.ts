@@ -11,10 +11,10 @@ export interface PassBase extends Resource {
   dynamicImages: ImageReferenceMap;
   voided: boolean;
   expirationDate?: Date;
-  firstRegisterAt?: Date;
-  lastRegisterAt?: Date;
-  firstUnregisterAt?: Date;
-  lastUnregisterAt?: Date;
+  readonly firstRegisterAt?: Date;
+  readonly lastRegisterAt?: Date;
+  readonly firstUnregisterAt?: Date;
+  readonly lastUnregisterAt?: Date;
   templateId: UUID;
   projectId: UUID;
   devices: PassDevices;
