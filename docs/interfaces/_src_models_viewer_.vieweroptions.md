@@ -6,10 +6,6 @@
 
 **ViewerOptions**
 
-## Implemented by
-
-* [Viewer](../classes/_src_models_viewer_.viewer.md)
-
 ## Index
 
 ### Properties
@@ -30,7 +26,7 @@
 
 **● email**: *`string`*
 
-*Defined in [src/models/viewer.ts:69](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L69)*
+*Defined in [src/models/viewer.ts:33](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L33)*
 
 ___
 <a id="id"></a>
@@ -39,7 +35,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [src/models/viewer.ts:68](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L68)*
+*Defined in [src/models/viewer.ts:32](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L32)*
 
 ___
 <a id="isadmin"></a>
@@ -48,7 +44,7 @@ ___
 
 **● isAdmin**: *`boolean`*
 
-*Defined in [src/models/viewer.ts:71](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L71)*
+*Defined in [src/models/viewer.ts:35](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L35)*
 
 ___
 <a id="name"></a>
@@ -57,7 +53,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [src/models/viewer.ts:70](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L70)*
+*Defined in [src/models/viewer.ts:34](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L34)*
 
 ___
 <a id="projects"></a>
@@ -66,7 +62,7 @@ ___
 
 **● projects**: *[Projects](_src_models_viewer_.projects.md)*
 
-*Defined in [src/models/viewer.ts:72](https://github.com/yourpass/yourpass-api-js-client/blob/598a0e7/src/models/viewer.ts#L72)*
+*Defined in [src/models/viewer.ts:36](https://github.com/yourpass/yourpass-api-js-client/blob/4c01e04/src/models/viewer.ts#L36)*
 
 ___
 
