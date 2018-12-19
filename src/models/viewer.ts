@@ -66,20 +66,20 @@ export class Viewer {
     this.name = viewer.name;
     this.isAdmin = viewer.isAdmin;
     this.projects = viewer.projects;
-    this.hasPermision = this.hasPermision.bind(this);
-    this.hasPermisionOnProject = this.hasPermisionOnProject.bind(this);
+    this.hasPermission = this.hasPermission.bind(this);
+    this.hasPermissionOnProject = this.hasPermissionOnProject.bind(this);
   }
 
   /**
    * hasPermision function says if user has {permission} on any project
    * @param permission
    */
-  public hasPermision(permission: Permission): boolean {
+  public hasPermission(permission: Permission): boolean {
     if (this.isAdmin) {
       return true;
     }
     for (const key in this.projects) {
-      if (this.hasPermisionOnProject(key, permission)) {
+      if (this.hasPermissionOnProject(key, permission)) {
         return true;
       }
     }
@@ -91,7 +91,7 @@ export class Viewer {
    * @param permission
    * @param projectId
    */
-  public hasPermisionOnProject(
+  public hasPermissionOnProject(
     projectId: UUID,
     permission: Permission,
   ): boolean {
