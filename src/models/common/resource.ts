@@ -1,4 +1,4 @@
-import { UUID } from "./index";
+import { UUID } from "..";
 
 export interface Resource {
   id: UUID;
