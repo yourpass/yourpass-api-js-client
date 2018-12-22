@@ -1,4 +1,4 @@
-import { Where, Order } from "./index";
+import { Where, Order } from "..";
 
 export interface Query {
   [index: string]: Where | Order | string | number;

@@ -1,4 +1,4 @@
-import { UUID } from "./uuid";
+import { UUID } from "./common/uuid";
 
 export enum Permission {
   PROJECT_ACCESS = 0,
