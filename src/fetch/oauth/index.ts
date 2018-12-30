@@ -1,2 +1,2 @@
-export * from "./OauthFetch";
+export * from "./OAuthFetch";
 export * from "./OAuthToken";
