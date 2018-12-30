@@ -34,7 +34,7 @@
 
 ⊕ **new OAuthToken**(opts: *[OAuthTokenOptions](../interfaces/_src_fetch_oauth_oauthtoken_.oauthtokenoptions.md)*): [OAuthToken](_src_fetch_oauth_oauthtoken_.oauthtoken.md)
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:23](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L23)*
+*Defined in src/fetch/oauth/OAuthToken.ts:23*
 
 **Parameters:**
 
@@ -54,7 +54,7 @@ ___
 
 **● accessToken**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L20)*
+*Defined in src/fetch/oauth/OAuthToken.ts:20*
 
 ___
 <a id="created"></a>
@@ -63,7 +63,7 @@ ___
 
 **● created**: *`number`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:23](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L23)*
+*Defined in src/fetch/oauth/OAuthToken.ts:23*
 
 ___
 <a id="expiresin"></a>
@@ -72,7 +72,7 @@ ___
 
 **● expiresIn**: *`number`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:21](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L21)*
+*Defined in src/fetch/oauth/OAuthToken.ts:21*
 
 ___
 <a id="tokentype"></a>
@@ -81,7 +81,7 @@ ___
 
 **● tokenType**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L22)*
+*Defined in src/fetch/oauth/OAuthToken.ts:22*
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 ▸ **getToken**(): `string`
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:39](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L39)*
+*Defined in src/fetch/oauth/OAuthToken.ts:39*
 
 **Returns:** `string`
 
@@ -104,7 +104,7 @@ ___
 
 ▸ **isExpired**(): `boolean`
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:32](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/fetch/oauth/OAuthToken.ts#L32)*
+*Defined in src/fetch/oauth/OAuthToken.ts:32*
 
 **Returns:** `boolean`
 

@@ -22,8 +22,8 @@
 
 **● __computed**: *`string`*
 
-*Defined in [src/constants/enviroments.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/constants/enviroments.ts#L14)*
-*Defined in [src/constants/enviroments.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/760fbb8/src/constants/enviroments.ts#L15)*
+*Defined in src/constants/enviroments.ts:14*
+*Defined in src/constants/enviroments.ts:15*
 
 ___
 
