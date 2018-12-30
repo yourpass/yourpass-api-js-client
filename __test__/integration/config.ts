@@ -1,6 +1,6 @@
 // @ts-ignore::disable:no-implicit-dependencies
 import dotenv from "dotenv";
-import { OAuthOptions } from "../src/fetch";
+import { OAuthOptions } from "../../src/fetch";
 
 dotenv.config();
 const credentials: OAuthOptions = {

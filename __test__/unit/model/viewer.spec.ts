@@ -1,4 +1,4 @@
-import { Viewer, Permission } from "./viewer";
+import { Viewer, Permission } from "../../../src/models/viewer";
 
 describe("Viewer model test", () => {
   it("simple permission test", () => {

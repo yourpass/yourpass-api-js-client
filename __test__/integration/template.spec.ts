@@ -1,5 +1,5 @@
 import config from "./config";
-import CoreClient, { Template, TemplateBase, List, UUID, createOAuthFetch } from "../index";
+import CoreClient, { Template, TemplateBase, List, UUID, createOAuthFetch } from "../../index";
 const fetch = createOAuthFetch({
   ...config,
 });

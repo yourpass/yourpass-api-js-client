@@ -38,12 +38,14 @@ For more details please visit ["generated TypeDoc documentation"](docs/).
 
 - `npm run build` - compile typescript in to dist/ folder
 - `npm run lint` - runs tslint check
-- `npm run test` - runs test
+- `npm run test` - runs all test
+- `npm run test:unit` - runs unit tests
+- `npm run test:integration` - runs integration test (see: [Itentegration test configuration](#itentegration-test-configuration))
 - `npm run typedoc` - runs generate typedoc documentation
 - `npm run prettier` - runs prettier to format code
 - `npm publish --access public` - publish in npm registry
 
-### Configuration
+### Integration test configuration
 
 Create .env file with your test account:
 
@@ -56,5 +58,5 @@ TEST_CLIENT_SECRET=...
 
 ## Licence
 
-Apache 2.0
+Apache License 2.0
 

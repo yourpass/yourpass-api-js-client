@@ -5,15 +5,22 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "jest",
-    "lint": "tslint -c tslint.json src/**/*.ts test/**/*.ts",
-    "prettier": "prettier --config .prettierrc --write src/**/*.ts test/**/*.ts",
+    "build": "tsc ",
+    "prebuild": "npm run tslint",
+    "postbuild": "npm run typedoc",
+    "test": "npm run test:unit && npm run test:integration",
+    "test:unit": "jest __test__/unit/",
+    "test:integration": "jest __test__/integration/",
+    "tslint": "tslint -c tslint.json src/**/*.ts __test__/**/*.ts",
+    "lint": "npm run test && npm run tslint",
+    "prettier": "prettier --config .prettierrc --write src/**/*.ts __test__/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "typedoc": "typedoc --theme markdown --out ./docs/ index.ts --exclude test/**/*.ts --readme none"
+    "typedoc": "typedoc --theme markdown --out ./docs/ index.ts --exclude __test__/**/*.ts --readme none",
+    "docker:npm-install": "docker run -v ${PWD}:/app  --rm node:10-alpine sh -c 'cd /app && npm install'",
+    "docker:npm-build": "docker run -v ${PWD}:/app  --rm node:10-alpine -c 'cd /app && npm build'"
   },
   "author": "Michal Černy",
-  "license": "MIT",
+  "license": "Apache License 2.0",
   "dependencies": {
     "buffer": "^5.2.1",
     "cross-fetch": "^2.2.2"
