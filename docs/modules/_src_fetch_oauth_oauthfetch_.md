@@ -1,6 +1,6 @@
-[@yourpass/api-js-client](../README.md) > ["src/fetch/oauth/OauthFetch"](../modules/_src_fetch_oauth_oauthfetch_.md)
+[@yourpass/api-js-client](../README.md) > ["src/fetch/oauth/OAuthFetch"](../modules/_src_fetch_oauth_oauthfetch_.md)
 
-# External module: "src/fetch/oauth/OauthFetch"
+# External module: "src/fetch/oauth/OAuthFetch"
 
 ## Index
 
@@ -34,7 +34,7 @@
 
 **● DEFAULT_AUTH_URL**: *`string`* =  profiles[Enviroment.PRODUCTION][API_URL.CORE]
 
-*Defined in src/fetch/oauth/OauthFetch.ts:13*
+*Defined in src/fetch/oauth/OAuthFetch.ts:13*
 
 ___
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **createOAuthFetch**(opts: *[OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md)*): [Fetch](_src_fetch_fetch_.md#fetch)
 
-*Defined in src/fetch/oauth/OauthFetch.ts:95*
+*Defined in src/fetch/oauth/OAuthFetch.ts:95*
 
 **Parameters:**
 
@@ -66,7 +66,7 @@ ___
 
 **DEFAULT_HEADERS**: *`object`*
 
-*Defined in src/fetch/oauth/OauthFetch.ts:8*
+*Defined in src/fetch/oauth/OAuthFetch.ts:8*
 
 <a id="default_headers.accept"></a>
 
@@ -74,7 +74,7 @@ ___
 
 **● Accept**: *`string`* = "application/json, application/x-www-form-urlencoded"
 
-*Defined in src/fetch/oauth/OauthFetch.ts:9*
+*Defined in src/fetch/oauth/OAuthFetch.ts:9*
 
 ___
 <a id="default_headers.content_type"></a>
@@ -83,7 +83,7 @@ ___
 
 **● Content-Type**: *`string`* = "application/x-www-form-urlencoded"
 
-*Defined in src/fetch/oauth/OauthFetch.ts:10*
+*Defined in src/fetch/oauth/OAuthFetch.ts:10*
 
 ___
 

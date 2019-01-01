@@ -5,10 +5,10 @@ import CoreApiClient, {
   OAuthToken,
   createHeaderTokenFetch,
   OAuthFetchObject,
-} from "../index";
-import {} from "../src/fetch";
-import { Viewer } from "../src/models";
-import { HTTPError } from "../src/helpers/httpError";
+} from "../../index";
+import {} from "../../src/fetch";
+import { Viewer } from "../../src/models";
+import { HTTPError } from "../../src/helpers/httpError";
 
 const oauthFetchInstance = createOAuthFetch({
   ...config,
