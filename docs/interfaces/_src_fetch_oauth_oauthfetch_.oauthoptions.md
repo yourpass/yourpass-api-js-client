@@ -1,4 +1,4 @@
-[@yourpass/api-js-client](../README.md) > ["src/fetch/oauth/OauthFetch"](../modules/_src_fetch_oauth_oauthfetch_.md) > [OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md)
+[@yourpass/api-js-client](../README.md) > ["src/fetch/oauth/OAuthFetch"](../modules/_src_fetch_oauth_oauthfetch_.md) > [OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md)
 
 # Interface: OAuthOptions
 
@@ -27,7 +27,7 @@
 **● authUrl**: * `undefined` &#124; `string`
 *
 
-*Defined in src/fetch/oauth/OauthFetch.ts:20*
+*Defined in src/fetch/oauth/OAuthFetch.ts:20*
 
 ___
 <a id="clientid"></a>
@@ -36,7 +36,7 @@ ___
 
 **● clientId**: *`string`*
 
-*Defined in src/fetch/oauth/OauthFetch.ts:16*
+*Defined in src/fetch/oauth/OAuthFetch.ts:16*
 
 ___
 <a id="clientsecret"></a>
@@ -45,7 +45,7 @@ ___
 
 **● clientSecret**: *`string`*
 
-*Defined in src/fetch/oauth/OauthFetch.ts:17*
+*Defined in src/fetch/oauth/OAuthFetch.ts:17*
 
 ___
 <a id="password"></a>
@@ -54,7 +54,7 @@ ___
 
 **● password**: *`string`*
 
-*Defined in src/fetch/oauth/OauthFetch.ts:19*
+*Defined in src/fetch/oauth/OAuthFetch.ts:19*
 
 ___
 <a id="username"></a>
@@ -63,7 +63,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in src/fetch/oauth/OauthFetch.ts:18*
+*Defined in src/fetch/oauth/OAuthFetch.ts:18*
 
 ___
 
