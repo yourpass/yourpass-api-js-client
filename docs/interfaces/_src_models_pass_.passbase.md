@@ -4,7 +4,7 @@
 
 ## Hierarchy
 
- [Resource](_src_models_resource_.resource.md)
+ [Resource](_src_models_common_resource_.resource.md)
 
 **↳ PassBase**
 
@@ -38,9 +38,9 @@
 
 **● createdAt**: *`Date`*
 
-*Inherited from [Resource](_src_models_resource_.resource.md).[createdAt](_src_models_resource_.resource.md#createdat)*
+*Inherited from [Resource](_src_models_common_resource_.resource.md).[createdAt](_src_models_common_resource_.resource.md#createdat)*
 
-*Defined in src/models/resource.ts:5*
+*Defined in [src/models/common/resource.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L5)*
 
 ___
 <a id="deletedat"></a>
@@ -50,9 +50,9 @@ ___
 **● deletedAt**: * `Date` &#124; `null`
 *
 
-*Inherited from [Resource](_src_models_resource_.resource.md).[deletedAt](_src_models_resource_.resource.md#deletedat)*
+*Inherited from [Resource](_src_models_common_resource_.resource.md).[deletedAt](_src_models_common_resource_.resource.md#deletedat)*
 
-*Defined in src/models/resource.ts:7*
+*Defined in [src/models/common/resource.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L7)*
 
 ___
 <a id="devices"></a>
@@ -61,7 +61,7 @@ ___
 
 **● devices**: *[PassDevices](_src_models_pass_.passdevices.md)*
 
-*Defined in src/models/pass.ts:20*
+*Defined in [src/models/pass.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L20)*
 
 ___
 <a id="dynamicdata"></a>
@@ -70,7 +70,7 @@ ___
 
 **● dynamicData**: *`any`*
 
-*Defined in src/models/pass.ts:10*
+*Defined in [src/models/pass.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L10)*
 
 ___
 <a id="dynamicimages"></a>
@@ -79,7 +79,7 @@ ___
 
 **● dynamicImages**: *[ImageReferenceMap](_src_models_image_.imagereferencemap.md)*
 
-*Defined in src/models/pass.ts:11*
+*Defined in [src/models/pass.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L11)*
 
 ___
 <a id="expirationdate"></a>
@@ -88,7 +88,7 @@ ___
 
 **● expirationDate**: *`Date`*
 
-*Defined in src/models/pass.ts:13*
+*Defined in [src/models/pass.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L13)*
 
 ___
 <a id="firstregisterat"></a>
@@ -97,7 +97,7 @@ ___
 
 **● firstRegisterAt**: *`Date`*
 
-*Defined in src/models/pass.ts:14*
+*Defined in [src/models/pass.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L14)*
 
 ___
 <a id="firstunregisterat"></a>
@@ -106,18 +106,18 @@ ___
 
 **● firstUnregisterAt**: *`Date`*
 
-*Defined in src/models/pass.ts:16*
+*Defined in [src/models/pass.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L16)*
 
 ___
 <a id="id"></a>
 
 ###  id
 
-**● id**: *[UUID](../modules/_src_models_uuid_.md#uuid)*
+**● id**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Inherited from [Resource](_src_models_resource_.resource.md).[id](_src_models_resource_.resource.md#id)*
+*Inherited from [Resource](_src_models_common_resource_.resource.md).[id](_src_models_common_resource_.resource.md#id)*
 
-*Defined in src/models/resource.ts:4*
+*Defined in [src/models/common/resource.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L4)*
 
 ___
 <a id="lastregisterat"></a>
@@ -126,7 +126,7 @@ ___
 
 **● lastRegisterAt**: *`Date`*
 
-*Defined in src/models/pass.ts:15*
+*Defined in [src/models/pass.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L15)*
 
 ___
 <a id="lastunregisterat"></a>
@@ -135,25 +135,25 @@ ___
 
 **● lastUnregisterAt**: *`Date`*
 
-*Defined in src/models/pass.ts:17*
+*Defined in [src/models/pass.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L17)*
 
 ___
 <a id="projectid"></a>
 
 ###  projectId
 
-**● projectId**: *[UUID](../modules/_src_models_uuid_.md#uuid)*
+**● projectId**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in src/models/pass.ts:19*
+*Defined in [src/models/pass.ts:19](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L19)*
 
 ___
 <a id="templateid"></a>
 
 ###  templateId
 
-**● templateId**: *[UUID](../modules/_src_models_uuid_.md#uuid)*
+**● templateId**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in src/models/pass.ts:18*
+*Defined in [src/models/pass.ts:18](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L18)*
 
 ___
 <a id="updatedat"></a>
@@ -162,9 +162,9 @@ ___
 
 **● updatedAt**: *`Date`*
 
-*Inherited from [Resource](_src_models_resource_.resource.md).[updatedAt](_src_models_resource_.resource.md#updatedat)*
+*Inherited from [Resource](_src_models_common_resource_.resource.md).[updatedAt](_src_models_common_resource_.resource.md#updatedat)*
 
-*Defined in src/models/resource.ts:6*
+*Defined in [src/models/common/resource.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L6)*
 
 ___
 <a id="voided"></a>
@@ -173,7 +173,7 @@ ___
 
 **● voided**: *`boolean`*
 
-*Defined in src/models/pass.ts:12*
+*Defined in [src/models/pass.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/pass.ts#L12)*
 
 ___
 

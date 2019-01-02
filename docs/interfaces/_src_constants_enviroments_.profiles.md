@@ -22,10 +22,10 @@
 
 **● __computed**: *[Profile](_src_constants_enviroments_.profile.md)*
 
-*Defined in src/constants/enviroments.ts:19*
-*Defined in src/constants/enviroments.ts:20*
-*Defined in src/constants/enviroments.ts:21*
-*Defined in src/constants/enviroments.ts:22*
+*Defined in [src/constants/enviroments.ts:19](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/constants/enviroments.ts#L19)*
+*Defined in [src/constants/enviroments.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/constants/enviroments.ts#L20)*
+*Defined in [src/constants/enviroments.ts:21](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/constants/enviroments.ts#L21)*
+*Defined in [src/constants/enviroments.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/constants/enviroments.ts#L22)*
 
 ___
 

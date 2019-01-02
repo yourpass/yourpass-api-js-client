@@ -27,7 +27,7 @@
 **● authUrl**: * `undefined` &#124; `string`
 *
 
-*Defined in src/fetch/oauth/OAuthFetch.ts:20*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/fetch/oauth/OAuthFetch.ts#L20)*
 
 ___
 <a id="clientid"></a>
@@ -36,7 +36,7 @@ ___
 
 **● clientId**: *`string`*
 
-*Defined in src/fetch/oauth/OAuthFetch.ts:16*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/fetch/oauth/OAuthFetch.ts#L16)*
 
 ___
 <a id="clientsecret"></a>
@@ -45,7 +45,7 @@ ___
 
 **● clientSecret**: *`string`*
 
-*Defined in src/fetch/oauth/OAuthFetch.ts:17*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/fetch/oauth/OAuthFetch.ts#L17)*
 
 ___
 <a id="password"></a>
@@ -54,7 +54,7 @@ ___
 
 **● password**: *`string`*
 
-*Defined in src/fetch/oauth/OAuthFetch.ts:19*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:19](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/fetch/oauth/OAuthFetch.ts#L19)*
 
 ___
 <a id="username"></a>
@@ -63,7 +63,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in src/fetch/oauth/OAuthFetch.ts:18*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:18](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/fetch/oauth/OAuthFetch.ts#L18)*
 
 ___
 

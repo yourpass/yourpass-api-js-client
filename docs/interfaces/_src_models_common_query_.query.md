@@ -1,0 +1,75 @@
+[@yourpass/api-js-client](../README.md) > ["src/models/common/query"](../modules/_src_models_common_query_.md) > [Query](../interfaces/_src_models_common_query_.query.md)
+
+# Interface: Query
+
+## Hierarchy
+
+**Query**
+
+## Indexable
+
+\[index: `string`\]:&nbsp; [Where](../modules/_src_models_common_where_.md#where) &#124; [Order](../enums/_src_models_common_order_.order.md) &#124; `string` &#124; `number`
+
+## Index
+
+### Properties
+
+* [limit](_src_models_common_query_.query.md#limit)
+* [order](_src_models_common_query_.query.md#order)
+* [orderBy](_src_models_common_query_.query.md#orderby)
+* [page](_src_models_common_query_.query.md#page)
+* [where](_src_models_common_query_.query.md#where)
+
+---
+
+## Properties
+
+<a id="limit"></a>
+
+### `<Optional>` limit
+
+**● limit**: * `undefined` &#124; `number`
+*
+
+*Defined in [src/models/common/query.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/query.ts#L9)*
+
+___
+<a id="order"></a>
+
+### `<Optional>` order
+
+**● order**: *[Order](../enums/_src_models_common_order_.order.md)*
+
+*Defined in [src/models/common/query.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/query.ts#L6)*
+
+___
+<a id="orderby"></a>
+
+### `<Optional>` orderBy
+
+**● orderBy**: * `undefined` &#124; `string`
+*
+
+*Defined in [src/models/common/query.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/query.ts#L7)*
+
+___
+<a id="page"></a>
+
+### `<Optional>` page
+
+**● page**: * `undefined` &#124; `number`
+*
+
+*Defined in [src/models/common/query.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/query.ts#L8)*
+
+___
+<a id="where"></a>
+
+### `<Optional>` where
+
+**● where**: *[Where](../modules/_src_models_common_where_.md#where)*
+
+*Defined in [src/models/common/query.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/query.ts#L5)*
+
+___
+

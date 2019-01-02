@@ -23,7 +23,7 @@
 
 **● enviroment**: *[Enviroment](../enums/_src_constants_enviroments_.enviroment.md)*
 
-*Defined in src/models/clientOptions.ts:6*
+*Defined in [src/models/clientOptions.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/clientOptions.ts#L6)*
 
 ___
 <a id="fetch"></a>
@@ -32,7 +32,7 @@ ___
 
 **● fetch**: *[Fetch](../modules/_src_fetch_fetch_.md#fetch)*
 
-*Defined in src/models/clientOptions.ts:5*
+*Defined in [src/models/clientOptions.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/clientOptions.ts#L5)*
 
 ___
 
