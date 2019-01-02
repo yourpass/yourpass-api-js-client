@@ -18,7 +18,7 @@
 
 **credentials**: *`object`*
 
-*Defined in [__test__/integration/config.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/__test__/integration/config.ts#L6)*
+*Defined in [__test__/integration/config.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/__test__/integration/config.ts#L6)*
 
 <a id="credentials.clientid"></a>
 
@@ -26,7 +26,7 @@
 
 **● clientId**: *`string`* =  process.env.TEST_CLIENT_ID || ""
 
-*Defined in [__test__/integration/config.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/__test__/integration/config.ts#L7)*
+*Defined in [__test__/integration/config.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/__test__/integration/config.ts#L7)*
 
 ___
 <a id="credentials.clientsecret"></a>
@@ -35,7 +35,7 @@ ___
 
 **● clientSecret**: *`string`* =  process.env.TEST_CLIENT_SECRET || ""
 
-*Defined in [__test__/integration/config.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/__test__/integration/config.ts#L8)*
+*Defined in [__test__/integration/config.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/__test__/integration/config.ts#L8)*
 
 ___
 <a id="credentials.password"></a>
@@ -44,7 +44,7 @@ ___
 
 **● password**: *`string`* =  process.env.TEST_PASSWORD || ""
 
-*Defined in [__test__/integration/config.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/__test__/integration/config.ts#L10)*
+*Defined in [__test__/integration/config.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/__test__/integration/config.ts#L10)*
 
 ___
 <a id="credentials.username"></a>
@@ -53,7 +53,7 @@ ___
 
 **● username**: *`string`* =  process.env.TEST_USERNAME || ""
 
-*Defined in [__test__/integration/config.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/__test__/integration/config.ts#L9)*
+*Defined in [__test__/integration/config.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/__test__/integration/config.ts#L9)*
 
 ___
 

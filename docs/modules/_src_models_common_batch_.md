@@ -24,7 +24,7 @@
 
 **Ƭ Batch**: *`Array`<[BatchItem](_src_models_common_batch_.md#batchitem)<`T`>>*
 
-*Defined in [src/models/common/batch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/batch.ts#L16)*
+*Defined in [src/models/common/batch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/batch.ts#L16)*
 
 ___
 <a id="batchitem"></a>
@@ -34,7 +34,7 @@ ___
 **Ƭ BatchItem**: * [CreateBatchItem](../interfaces/_src_models_common_batch_.createbatchitem.md)<`T`> &#124; [OtherBatchItem](../interfaces/_src_models_common_batch_.otherbatchitem.md)<`T`>
 *
 
-*Defined in [src/models/common/batch.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/batch.ts#L14)*
+*Defined in [src/models/common/batch.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/batch.ts#L14)*
 
 ___
 

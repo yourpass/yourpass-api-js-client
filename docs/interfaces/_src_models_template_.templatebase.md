@@ -33,7 +33,7 @@
 
 **● certificateId**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in [src/models/template.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/template.ts#L6)*
+*Defined in [src/models/template.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/template.ts#L6)*
 
 ___
 <a id="createdat"></a>
@@ -44,7 +44,7 @@ ___
 
 *Inherited from [Resource](_src_models_common_resource_.resource.md).[createdAt](_src_models_common_resource_.resource.md#createdat)*
 
-*Defined in [src/models/common/resource.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L5)*
+*Defined in [src/models/common/resource.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/resource.ts#L5)*
 
 ___
 <a id="deletedat"></a>
@@ -56,7 +56,7 @@ ___
 
 *Inherited from [Resource](_src_models_common_resource_.resource.md).[deletedAt](_src_models_common_resource_.resource.md#deletedat)*
 
-*Defined in [src/models/common/resource.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L7)*
+*Defined in [src/models/common/resource.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/resource.ts#L7)*
 
 ___
 <a id="distributable"></a>
@@ -65,7 +65,7 @@ ___
 
 **● distributable**: *`boolean`*
 
-*Defined in [src/models/template.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/template.ts#L7)*
+*Defined in [src/models/template.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/template.ts#L7)*
 
 ___
 <a id="id"></a>
@@ -76,7 +76,7 @@ ___
 
 *Inherited from [Resource](_src_models_common_resource_.resource.md).[id](_src_models_common_resource_.resource.md#id)*
 
-*Defined in [src/models/common/resource.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L4)*
+*Defined in [src/models/common/resource.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/resource.ts#L4)*
 
 ___
 <a id="name"></a>
@@ -85,7 +85,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [src/models/template.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/template.ts#L4)*
+*Defined in [src/models/template.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/template.ts#L4)*
 
 ___
 <a id="projectid"></a>
@@ -94,7 +94,7 @@ ___
 
 **● projectId**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in [src/models/template.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/template.ts#L5)*
+*Defined in [src/models/template.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/template.ts#L5)*
 
 ___
 <a id="updatedat"></a>
@@ -105,7 +105,7 @@ ___
 
 *Inherited from [Resource](_src_models_common_resource_.resource.md).[updatedAt](_src_models_common_resource_.resource.md#updatedat)*
 
-*Defined in [src/models/common/resource.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/56d4416/src/models/common/resource.ts#L6)*
+*Defined in [src/models/common/resource.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/resource.ts#L6)*
 
 ___
 
