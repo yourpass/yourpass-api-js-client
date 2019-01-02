@@ -8,7 +8,7 @@
 
 ## Indexable
 
-\[key: `string`\]:&nbsp;[UUID](../modules/_src_models_uuid_.md#uuid)
+\[key: `string`\]:&nbsp;[UUID](../modules/_src_models_common_uuid_.md#uuid)
 ## Index
 
 ---
