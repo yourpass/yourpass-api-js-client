@@ -6,10 +6,14 @@ import {
   UUID,
   Viewer,
   ViewerOptions,
+  Batch,
+  BatchResponse,
 } from "./models";
 import { Enviroment, API_URL, profiles } from "./constants/enviroments";
 import { appendUrlParam } from "./helpers/url";
 import {HTTPError} from "./helpers/httpError";
+
+const LIMIT = 1000;
 
 /**
  * A class representing a basic client, which contains:
@@ -131,6 +135,57 @@ export default class DefaultClient {
       method: "DELETE",
     });
   }
+
+  /**
+   * Batch operation
+   */
+  public batch<T>(api: API_URL, resource: string, batch: Batch<T>): Promise<BatchResponse<T>> {
+    return this.fetch(`${this.getURL(api)}/v1/${resource}/batch`, {
+      method: "POST",
+      body: JSON.stringify(batch),
+    });
+  }
+
+  /*
+  protected listComplete<T>(
+    api: API_URL,
+    resource: string,
+    query?: Query,
+  ): Promise<List<T>>  {
+    return new Promise(async (resolve, reject) => {
+      try {
+        const firstPage = await this.list<T>(api,resource, { page: 1, ...query });
+        const allData: T[]= firstPage.data;
+
+        const pageCount = Math.ceil(firstPage.totalCount / LIMIT);
+        const promises: Promise<List<T>>[] = [];
+        for (let i = 2; i <= pageCount; ) {
+          promises.push(this.list<T>(api, resource, { page: i, ...query }));
+          i += 1;
+        }
+
+        const partials = await Promise.all(promises);
+        partials.forEach(p => {
+          if (p && p.data) {
+            p.data.forEach(i => {
+              allData.push(i);
+            });
+          }
+        });
+
+        const response: List<T> = {
+          data: allData,
+          totalCount: allData.length,
+          
+        };
+        resolve(response);
+      } catch (e) {
+        reject(e);
+      }
+    });
+  }
+  */
+
 
   /**
    * Returns current user object (viewer) instance

@@ -11,6 +11,15 @@ interface OtherBatchItem<T> {
     data: T;
 } 
 
+export interface BatchResponse<T> {
+    status: {
+        "code": number,
+        "message": string
+      },
+    data: T
+}
+
+
 export type BatchItem<T> = CreateBatchItem<T> | OtherBatchItem<T>
 
 export type Batch<T> = Array<BatchItem<T>>
