@@ -18,7 +18,7 @@
 
 **Ƭ UUID**: *`string`*
 
-*Defined in [src/models/common/uuid.ts:1](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/uuid.ts#L1)*
+*Defined in [src/models/common/uuid.ts:1](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/common/uuid.ts#L1)*
 
 ___
 

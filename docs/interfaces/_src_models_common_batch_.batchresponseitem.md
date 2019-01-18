@@ -26,7 +26,7 @@
 
 **● data**: *[T]()*
 
-*Defined in [src/models/common/batch.ts:25](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/batch.ts#L25)*
+*Defined in [src/models/common/batch.ts:25](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/common/batch.ts#L25)*
 
 ___
 <a id="id"></a>
@@ -35,7 +35,7 @@ ___
 
 **● id**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in [src/models/common/batch.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/batch.ts#L24)*
+*Defined in [src/models/common/batch.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/common/batch.ts#L24)*
 
 ___
 <a id="status"></a>
@@ -44,7 +44,7 @@ ___
 
 **● status**: *`object`*
 
-*Defined in [src/models/common/batch.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/batch.ts#L20)*
+*Defined in [src/models/common/batch.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/common/batch.ts#L20)*
 
 #### Type declaration
 
