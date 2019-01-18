@@ -9,7 +9,6 @@ import {
   Batch,
   BatchResponse,
 } from "./models";
-import { Enviroment, API_URL, profiles } from "./constants/enviroments";
 import { appendUrlParam } from "./helpers/url";
 import {HTTPError} from "./helpers/httpError";
 
@@ -21,11 +20,11 @@ const LIMIT = 1000;
  *  - common methods for REST resource CRUD operations (List, Get, Patch, Delete,..)
  *  - gother common helper functions
  */
-export default class DefaultClient {
+export default class ClientBase {
   /** fetchFunction function for call http request */
   public fetchFunction: Fetch;
   /** enviroment for which was client created */
-  public enviroment: Enviroment;
+  public urlBase: string;
 
   /**
    * Create a DefaultClient.
@@ -33,14 +32,7 @@ export default class DefaultClient {
    */
   constructor(opts: ClientOptions) {
     this.fetchFunction = opts.fetch;
-    this.enviroment = opts.enviroment || Enviroment.PRODUCTION;
-  }
-
-  /**
-   * Returns base url for api and current enviroment
-   */
-  public getURL(api: API_URL) {
-    return profiles[this.enviroment][api];
+    this.urlBase = opts.urlBase;
   }
 
   /**
@@ -59,7 +51,7 @@ export default class DefaultClient {
    * List of resource on selected api for specified query
    */
   public list<T>(
-    api: API_URL,
+    urlBase: string,
     resource: string,
     query?: Query,
   ): Promise<List<T>> {
@@ -73,7 +65,7 @@ export default class DefaultClient {
       queryStr = `?${queryStr}`;
     }
 
-    return this.fetch(`${this.getURL(api)}/v1/${resource}${queryStr}`, {
+    return this.fetch(`${urlBase}/v1/${resource}${queryStr}`, {
       method: "GET",
     });
   }
@@ -81,8 +73,8 @@ export default class DefaultClient {
   /**
    * Get instance of resource on selected api for specified id
    */
-  public get<T>(api: API_URL, resource: string, id: UUID): Promise<T> {
-    return this.fetch(`${this.getURL(api)}/v1/${resource}/${id}`, {
+  public get<T>(urlBase: string, resource: string, id: UUID): Promise<T> {
+    return this.fetch(`${urlBase}/v1/${resource}/${id}`, {
       method: "GET",
     });
   }
@@ -90,8 +82,8 @@ export default class DefaultClient {
   /**
    * Create new instance of resource on selected api
    */
-  public create<T>(api: API_URL, resource: string, object: any): Promise<T> {
-    return this.fetch(`${this.getURL(api)}/v1/${resource}`, {
+  public create<T>(urlBase: string, resource: string, object: any): Promise<T> {
+    return this.fetch(`${urlBase}/v1/${resource}`, {
       method: "POST",
       body: JSON.stringify(object),
     });
@@ -101,12 +93,12 @@ export default class DefaultClient {
    * Update instance with id of resource on selected api
    */
   public update<T>(
-    api: API_URL,
+    urlBase: string,
     resource: string,
     id: UUID,
     object: any,
   ): Promise<T> {
-    return this.fetch(`${this.getURL(api)}/v1/${resource}/${id}`, {
+    return this.fetch(`${urlBase}/v1/${resource}/${id}`, {
       method: "PUT",
       body: JSON.stringify(object),
     });
@@ -116,12 +108,12 @@ export default class DefaultClient {
    * Patch instance with id of resource on selected api
    */
   public patch<T>(
-    api: API_URL,
+    urlBase: string,
     resource: string,
     id: UUID,
     object: any,
   ): Promise<T> {
-    return this.fetch(`${this.getURL(api)}/v1/${resource}/${id}`, {
+    return this.fetch(`${urlBase}/v1/${resource}/${id}`, {
       method: "PATCH",
       body: JSON.stringify(object),
     });
@@ -130,8 +122,8 @@ export default class DefaultClient {
   /**
    * Delete instance with id of resource on selected api
    */
-  public delete<T>(api: API_URL, resource: string, id: UUID): Promise<T> {
-    return this.fetch(`${this.getURL(api)}/v1/${resource}/${id}`, {
+  public delete<T>(urlBase: string, resource: string, id: UUID): Promise<T> {
+    return this.fetch(`${urlBase}/v1/${resource}/${id}`, {
       method: "DELETE",
     });
   }
@@ -139,8 +131,8 @@ export default class DefaultClient {
   /**
    * Batch operation
    */
-  public batch<T>(api: API_URL, resource: string, batch: Batch<T>): Promise<BatchResponse<T>> {
-    return this.fetch(`${this.getURL(api)}/v1/${resource}/batch`, {
+  public batch<T>(urlBase: string, resource: string, batch: Batch<T>): Promise<BatchResponse<T>> {
+    return this.fetch(`${urlBase}/v1/${resource}/batch`, {
       method: "POST",
       body: JSON.stringify(batch),
     });
@@ -148,7 +140,7 @@ export default class DefaultClient {
 
   /*
   protected listComplete<T>(
-    api: API_URL,
+    urlBase: string,
     resource: string,
     query?: Query,
   ): Promise<List<T>>  {
@@ -191,7 +183,7 @@ export default class DefaultClient {
    * Returns current user object (viewer) instance
    */
   public getViewer(): Promise<Viewer> {
-    return this.get<ViewerOptions>(API_URL.CORE, "user", "me").then(
+    return this.get<ViewerOptions>(this.urlBase, "user", "me").then(
       (resp: ViewerOptions) => {
         return new Viewer(resp);
       },

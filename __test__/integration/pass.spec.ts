@@ -1,4 +1,4 @@
-import config from "./config";
+import config, { enviroment } from "./config";
 import CoreClient, { Pass, List, UUID, createOAuthFetch } from "../../index";
 const fetch = createOAuthFetch({
   ...config,
@@ -6,7 +6,7 @@ const fetch = createOAuthFetch({
 
 const testPassId: UUID = process.env.TEST_PASS_ID || "";
 
-const client = new CoreClient({ fetch });
+const client = new CoreClient({ fetch,  ...enviroment, });
 
 describe("pass test", () => {
   it("get", (done) => {
