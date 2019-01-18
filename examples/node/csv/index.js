@@ -88,9 +88,9 @@ program
   .option('-o, --output [our]', 'Input csv file path')
   .option('-u, --username [username]', 'Username')
   .option('-p, --password [password]', 'Password')
-  .option('-c, --clientId [clientId]', 'OAuth client ID') //"c36b6721-04d5-4dce-b1f2-4796d8fcc849",
-  .option('-s, --clientSecret [clientSecret]', 'OAuth client ID') //""
-  .option('-a, --url [url]', 'Api URL')  // "https://api.yourpass.eu" 
+  .option('-c, --clientId [clientId]', 'OAuth client ID') 
+  .option('-s, --clientSecret [clientSecret]', 'OAuth client ID') 
+  .option('-a, --url [url]', 'Api URL')
   .parse(process.argv);
 
 const config = {
