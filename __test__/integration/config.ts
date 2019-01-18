@@ -5,19 +5,19 @@ import { OAuthOptions } from "../../src/fetch";
 dotenv.config();
 
 if (!process.env.TEST_API_URL) {
-  throw "TEST_API_URL is not set";
+  throw new Error("TEST_API_URL is not set");
 }
 if (!process.env.TEST_CLIENT_ID) {
-  throw "TEST_CLIENT_ID is not set";
+  throw new Error("TEST_CLIENT_ID is not set");
 }
 if (process.env.TEST_CLIENT_SECRET === undefined) {
-  throw "TEST_CLIENT_SECRET is not set";
+  throw new Error("TEST_CLIENT_SECRET is not set");
 }
 if (!process.env.TEST_USERNAME) {
-  throw "TEST_USERNAME is not set";
+  throw new Error("TEST_USERNAME is not set");
 }
 if (!process.env.TEST_PASSWORD) {
-  throw "TEST_PASSWORD is not set";
+  throw new Error("TEST_PASSWORD is not set");
 }
 
 export const enviroment: { urlBase: string } = {
