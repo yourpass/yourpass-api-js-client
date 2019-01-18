@@ -18,9 +18,9 @@
 
 ### `<Const>` client
 
-**● client**: *[CoreClient](../classes/_src_client_.coreclient.md)* =  new CoreClient({ fetch, ...enviroment })
+**● client**: *[CoreClient](../classes/_src_client_.coreclient.md)* =  new   Client({ fetch, ...enviroment })
 
-*Defined in [__test__/integration/pass.spec.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/__test__/integration/pass.spec.ts#L10)*
+*Defined in [__test__/integration/pass.spec.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/__test__/integration/pass.spec.ts#L10)*
 
 ___
 <a id="fetch"></a>
@@ -31,7 +31,7 @@ ___
   ...config,
 })
 
-*Defined in [__test__/integration/pass.spec.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/__test__/integration/pass.spec.ts#L4)*
+*Defined in [__test__/integration/pass.spec.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/__test__/integration/pass.spec.ts#L4)*
 
 #### Type declaration
 ▸(input: *`RequestInfo`*, init?: *`RequestInit`*): `Promise`<`Response`>
@@ -52,7 +52,7 @@ ___
 
 **● testPassId**: *[UUID](_src_models_common_uuid_.md#uuid)* =  process.env.TEST_PASS_ID || ""
 
-*Defined in [__test__/integration/pass.spec.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/__test__/integration/pass.spec.ts#L8)*
+*Defined in [__test__/integration/pass.spec.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/__test__/integration/pass.spec.ts#L8)*
 
 ___
 

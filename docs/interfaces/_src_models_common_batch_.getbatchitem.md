@@ -25,7 +25,7 @@
 
 **● id**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in [src/models/common/batch.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/batch.ts#L10)*
+*Defined in [src/models/common/batch.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/batch.ts#L10)*
 
 ___
 <a id="method"></a>
@@ -34,7 +34,7 @@ ___
 
 **● method**: *"GET"*
 
-*Defined in [src/models/common/batch.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/batch.ts#L9)*
+*Defined in [src/models/common/batch.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/batch.ts#L9)*
 
 ___
 

@@ -26,7 +26,7 @@
 
 **● email**: *`string`*
 
-*Defined in [src/models/viewer.ts:37](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/viewer.ts#L37)*
+*Defined in [src/models/viewer.ts:37](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/viewer.ts#L37)*
 
 ___
 <a id="id"></a>
@@ -35,7 +35,7 @@ ___
 
 **● id**: *`string`*
 
-*Defined in [src/models/viewer.ts:36](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/viewer.ts#L36)*
+*Defined in [src/models/viewer.ts:36](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/viewer.ts#L36)*
 
 ___
 <a id="isadmin"></a>
@@ -44,7 +44,7 @@ ___
 
 **● isAdmin**: *`boolean`*
 
-*Defined in [src/models/viewer.ts:39](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/viewer.ts#L39)*
+*Defined in [src/models/viewer.ts:39](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/viewer.ts#L39)*
 
 ___
 <a id="name"></a>
@@ -53,7 +53,7 @@ ___
 
 **● name**: *`string`*
 
-*Defined in [src/models/viewer.ts:38](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/viewer.ts#L38)*
+*Defined in [src/models/viewer.ts:38](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/viewer.ts#L38)*
 
 ___
 <a id="projects"></a>
@@ -62,7 +62,7 @@ ___
 
 **● projects**: *[Projects](_src_models_viewer_.projects.md)*
 
-*Defined in [src/models/viewer.ts:40](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/viewer.ts#L40)*
+*Defined in [src/models/viewer.ts:40](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/viewer.ts#L40)*
 
 ___
 

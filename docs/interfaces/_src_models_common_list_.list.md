@@ -27,7 +27,7 @@
 
 **● data**: *`T`[]*
 
-*Defined in [src/models/common/list.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/list.ts#L5)*
+*Defined in [src/models/common/list.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/list.ts#L5)*
 
 ___
 <a id="limit"></a>
@@ -36,7 +36,7 @@ ___
 
 **● limit**: *`number`*
 
-*Defined in [src/models/common/list.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/list.ts#L2)*
+*Defined in [src/models/common/list.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/list.ts#L2)*
 
 ___
 <a id="page"></a>
@@ -45,7 +45,7 @@ ___
 
 **● page**: *`number`*
 
-*Defined in [src/models/common/list.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/list.ts#L3)*
+*Defined in [src/models/common/list.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/list.ts#L3)*
 
 ___
 <a id="totalcount"></a>
@@ -54,7 +54,7 @@ ___
 
 **● totalCount**: *`number`*
 
-*Defined in [src/models/common/list.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/list.ts#L4)*
+*Defined in [src/models/common/list.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/models/common/list.ts#L4)*
 
 ___
 

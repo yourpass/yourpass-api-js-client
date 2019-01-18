@@ -27,7 +27,7 @@
 **● access_token**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthToken.ts#L2)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:2](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/fetch/oauth/OAuthToken.ts#L2)*
 
 ___
 <a id="error"></a>
@@ -37,7 +37,7 @@ ___
 **● error**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthToken.ts#L5)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/fetch/oauth/OAuthToken.ts#L5)*
 
 ___
 <a id="error_description"></a>
@@ -47,7 +47,7 @@ ___
 **● error_description**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthToken.ts#L6)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/fetch/oauth/OAuthToken.ts#L6)*
 
 ___
 <a id="expires_in"></a>
@@ -57,7 +57,7 @@ ___
 **● expires_in**: * `undefined` &#124; `number`
 *
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthToken.ts#L3)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:3](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/fetch/oauth/OAuthToken.ts#L3)*
 
 ___
 <a id="token_type"></a>
@@ -67,7 +67,7 @@ ___
 **● token_type**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthToken.ts#L4)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/3ba43c5/src/fetch/oauth/OAuthToken.ts#L4)*
 
 ___
 
