@@ -130,7 +130,10 @@ export default class ClientBase {
     });
   }
 
-  private batchChunks<T>(array: Batch<T>, size: number = 25): Array<Batch<T>> {
+  private batchChunks<T>(
+    array: Batch<T>,
+    size: number = BATCH_SIZE,
+  ): Array<Batch<T>> {
     var results: Array<Batch<T>> = [];
     while (array.length) {
       results.push(array.splice(0, size));
@@ -147,15 +150,18 @@ export default class ClientBase {
     batch: Batch<T>,
     size: number = BATCH_SIZE,
   ): Promise<BatchResponse<T>> {
-    const chunks = this.batchChunks(batch);
+    const chunks = this.batchChunks(batch, size);
     const result: BatchResponse<T> = [];
     for (const chunk of chunks) {
       let chunkResults: BatchResponse<T> = [];
       try {
-        chunkResults = await this.fetch<BatchResponse<T>>(`${urlBase}/v1/${resource}/batch`, {
-          method: "POST",
-          body: JSON.stringify(chunk),
-        });
+        chunkResults = await this.fetch<BatchResponse<T>>(
+          `${urlBase}/v1/${resource}/batch`,
+          {
+            method: "POST",
+            body: JSON.stringify(chunk),
+          },
+        );
       } catch (e) {
         chunkResults = chunk.map((item: BatchItem<T>) => ({
           status: {
@@ -167,49 +173,9 @@ export default class ClientBase {
         }));
       }
       result.push(...chunkResults);
-    } 
+    }
     return Promise.resolve(result);
   }
-
-  /*
-  protected listComplete<T>(
-    urlBase: string,
-    resource: string,
-    query?: Query,
-  ): Promise<List<T>>  {
-    return new Promise(async (resolve, reject) => {
-      try {
-        const firstPage = await this.list<T>(api,resource, { page: 1, ...query });
-        const allData: T[]= firstPage.data;
-
-        const pageCount = Math.ceil(firstPage.totalCount / LIMIT);
-        const promises: Promise<List<T>>[] = [];
-        for (let i = 2; i <= pageCount; ) {
-          promises.push(this.list<T>(api, resource, { page: i, ...query }));
-          i += 1;
-        }
-
-        const partials = await Promise.all(promises);
-        partials.forEach(p => {
-          if (p && p.data) {
-            p.data.forEach(i => {
-              allData.push(i);
-            });
-          }
-        });
-
-        const response: List<T> = {
-          data: allData,
-          totalCount: allData.length,
-          
-        };
-        resolve(response);
-      } catch (e) {
-        reject(e);
-      }
-    });
-  }
-  */
 
   /**
    * Returns current user object (viewer) instance
