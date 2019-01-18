@@ -1,5 +1,5 @@
 import config, { enviroment } from "./config";
-import CoreClient, {
+import {Client,
   Template,
   TemplateBase,
   List,
@@ -12,7 +12,7 @@ const fetch = createOAuthFetch({
 
 let testTemplateId: UUID;
 
-const client = new CoreClient({ fetch, ...enviroment });
+const client = new Client({ fetch, ...enviroment });
 
 describe("tenplate test", () => {
   it("list", (done) => {

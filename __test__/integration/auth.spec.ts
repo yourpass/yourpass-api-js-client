@@ -1,5 +1,6 @@
 import config, { enviroment } from "./config";
-import CoreApiClient, {
+import {
+  Client,
   createOAuthFetch,
   Fetch,
   OAuthToken,
@@ -90,7 +91,7 @@ describe("OAuth test", () => {
   });
 
   it("get viewer", (done: jest.DoneCallback) => {
-    const client: CoreApiClient = new CoreApiClient({
+    const client: Client = new Client({
       fetch: oauthFetchInstance,
       ...enviroment,
     });
@@ -102,7 +103,7 @@ describe("OAuth test", () => {
   it("unauthorized get viewer", (done: jest.DoneCallback) => {
     const c = { ...config };
     c.password = "";
-    const client: CoreApiClient = new CoreApiClient({
+    const client: Client = new Client({
       fetch: createOAuthFetch(c),
       ...enviroment,
     });
@@ -119,7 +120,7 @@ describe("header token fetch", () => {
     const tokenFetch: Fetch = createHeaderTokenFetch({
       accessToken: (credentialsToken && credentialsToken.accessToken) || ``,
     });
-    const client: CoreApiClient = new CoreApiClient({
+    const client: Client = new Client({
       fetch: tokenFetch,
       ...enviroment,
     });
@@ -133,7 +134,7 @@ describe("header token fetch", () => {
     const tokenFetch: Fetch = createHeaderTokenFetch({
       accessToken: ``,
     });
-    const client: CoreApiClient = new CoreApiClient({
+    const client: Client = new Client({
       fetch: tokenFetch,
       ...enviroment,
     });

@@ -1,15 +1,18 @@
 const fs = require("fs");
 const csvjson = require("csvjson");
 const _ = require("lodash")
+// TODO - replace by npm module
+const YourpassClient = require("../../../dist/index.js");
+const program = require('commander');
+const pjosn = require("./package.json");
 
+var options = {
+  delimiter: ";", // optional
+  quote: '"' // optional
+};
 
 
 function prepareBatches(data){
-  var options = {
-    delimiter: ";", // optional
-    quote: '"' // optional
-  };
-
   const parsedData = csvjson.toObject(data, options);
   var batches = [];
   for (var i = 0; i < parsedData.length; i++) {
@@ -18,11 +21,15 @@ function prepareBatches(data){
     const pass = {}
 
     Object.keys(item).map((key)=>{
-          _.set(pass,key,item[key]);
+      _.set(pass,key,item[key]);
     })
 
+    if (pass.id ===""){
+      delete pass.id
+    }
+
     const batch = {
-      method: pass.id? "PUT":"POST",
+      method: pass.id ? "PUT":"POST",
       id: pass.id,
       data:pass
     }
@@ -33,39 +40,69 @@ function prepareBatches(data){
 
 
 
-async function importCSV(filePath) {
+async function importCSV(config) {
+  const opts = {
+    clientId: config.clientId,
+    clientSecret: config.clientSecret,
+    username: config.username,
+    password: config.password,
+    url: config.url
+  }
+
   // read file
-  var input = fs.readFileSync(filePath, {
+  var input = fs.readFileSync(config.input, {
     encoding: "utf8"
   });
 
-  const batches = pass.prepareBatches(input)
+  const batches = prepareBatches(input)
 
-  console.log(JSON.stringify(batches, null, 4));
+  const fetch = YourpassClient.createOAuthFetch(opts);
+  const client = new YourpassClient.Client({ fetch, urlBase: config.url });
 
-  /*
-  const toWrite = csvjson.toCSV(resData, options);
+  const results = await client.passBatch(batches)
 
-  var stream = fs.createWriteStream("created.csv");
-  stream.once("open", function(fd) {
-    stream.write(toWrite);
-    stream.end();
-  });
-  */
+  const csvResults = [];
+  for (var i = 0; i<results.length; i++){
+    const r = results[i].data;
+    r.statusCode=results[i].status.code;
+    r.statusMessage=JSON.stringify(results[i].status.messages);
+    csvResults.push(r)
+  }
 
-  return resData;
+  if (config.output){
+    const toWrite = csvjson.toCSV(csvResults, options);
+    var stream = fs.createWriteStream(config.output);
+    stream.once("open", function(fd) {
+      stream.write(toWrite);
+      stream.end();
+    });
+  }
+  //process.exit(0)
 }
 
+// Parse commandline arguments
+program
+  .version(pjosn.version)
+  .usage('--input <INPUT_FILE_PATH> --output <OUTPUT_FILE_PATH> --clientId <CLIENT_ID> --clientSecret <CLIENT_SECRET> --url <API_URL> --username <USER> --password <PWD>')
+  .option('-f, --input [file]', 'Input csv file path')
+  .option('-o, --output [our]', 'Input csv file path')
+  .option('-u, --username [username]', 'Username')
+  .option('-p, --password [password]', 'Password')
+  .option('-c, --clientId [clientId]', 'OAuth client ID') //"c36b6721-04d5-4dce-b1f2-4796d8fcc849",
+  .option('-s, --clientSecret [clientSecret]', 'OAuth client ID') //""
+  .option('-a, --url [url]', 'Api URL')  // "https://api.yourpass.eu" 
+  .parse(process.argv);
 
+const config = {
+  input: program.input,
+  output: program.output,
+  clientId: program.clientId,
+  clientSecret: program.clientSecret,
+  username: program.username,
+  password: program.password,
+  url: program.url
+}
 
-// Parse arguments
-const args = {}
-process.argv.forEach(function (val, index, array) {
-  const arr = val.split("=")
-  if (arr.length > 1){
-    args[arr[0]]=arr[1]
-  }
-});
-importCSV(args.file, args.username, args.password)
+console.log(config)
+importCSV(config)
 
-process.exit(0)

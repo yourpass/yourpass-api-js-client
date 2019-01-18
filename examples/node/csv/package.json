@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.19.0",
     "csvjson": "^5.0.0",
     "lodash": "^4.17.11"
   }
