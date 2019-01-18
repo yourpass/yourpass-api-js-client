@@ -7,7 +7,7 @@ const fetch = createOAuthFetch({
 
 const testPassId: UUID = process.env.TEST_PASS_ID || "";
 
-const client = new CoreClient({ fetch,  ...enviroment, });
+const client = new CoreClient({ fetch, ...enviroment });
 
 describe("pass test", () => {
   it("get", (done) => {
@@ -29,21 +29,18 @@ describe("pass test", () => {
     }, done);
   });
 
-
   it("batch reads", (done) => {
-    const batches:Batch<Pass> = [];
-    for (let i=0;i <100;i++){
+    const batches: Batch<Pass> = [];
+    for (let i = 0; i < 100; i++) {
       batches.push({
-        method: 'GET',
-        id: testPassId, 
-      })
+        method: "GET",
+        id: testPassId,
+      });
     }
 
     client.passBatch(batches).then((resp: BatchResponse<Pass>) => {
       expect(resp.length).toEqual(100);
-      console.log(JSON.stringify(resp,null,4));  
       done();
     }, done);
   });
-
 });
