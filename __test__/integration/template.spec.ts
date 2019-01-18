@@ -12,7 +12,7 @@ const fetch = createOAuthFetch({
 
 let testTemplateId: UUID;
 
-const client = new CoreClient({ fetch,  ...enviroment, });
+const client = new CoreClient({ fetch, ...enviroment });
 
 describe("tenplate test", () => {
   it("list", (done) => {

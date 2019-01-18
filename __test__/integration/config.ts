@@ -20,7 +20,7 @@ if (!process.env.TEST_PASSWORD) {
   throw "TEST_PASSWORD is not set";
 }
 
-export const enviroment: { urlBase: string} = {
+export const enviroment: { urlBase: string } = {
   urlBase: process.env.TEST_API_URL,
 };
 
