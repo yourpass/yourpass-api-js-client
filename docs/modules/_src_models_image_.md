@@ -24,7 +24,7 @@
 **Ƭ ImageReference**: * [UUID](_src_models_common_uuid_.md#uuid) &#124; [TranslatedImageReference](../interfaces/_src_models_image_.translatedimagereference.md)
 *
 
-*Defined in [src/models/image.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/image.ts#L7)*
+*Defined in [src/models/image.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/image.ts#L7)*
 
 ___
 

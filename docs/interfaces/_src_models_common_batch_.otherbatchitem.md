@@ -14,7 +14,7 @@
 
 * [data](_src_models_common_batch_.otherbatchitem.md#data)
 * [id](_src_models_common_batch_.otherbatchitem.md#id)
-* [type](_src_models_common_batch_.otherbatchitem.md#type)
+* [method](_src_models_common_batch_.otherbatchitem.md#method)
 
 ---
 
@@ -26,7 +26,7 @@
 
 **● data**: *`T`*
 
-*Defined in [src/models/common/batch.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/batch.ts#L11)*
+*Defined in [src/models/common/batch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/batch.ts#L16)*
 
 ___
 <a id="id"></a>
@@ -35,17 +35,17 @@ ___
 
 **● id**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in [src/models/common/batch.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/batch.ts#L10)*
+*Defined in [src/models/common/batch.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/batch.ts#L15)*
 
 ___
-<a id="type"></a>
+<a id="method"></a>
 
-###  type
+###  method
 
-**● type**: * "GET" &#124; "PUT" &#124; "DELETE" &#124; "PATCH"
+**● method**: * "PUT" &#124; "DELETE" &#124; "PATCH"
 *
 
-*Defined in [src/models/common/batch.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/models/common/batch.ts#L9)*
+*Defined in [src/models/common/batch.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/models/common/batch.ts#L14)*
 
 ___
 
