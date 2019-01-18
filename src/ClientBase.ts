@@ -8,11 +8,13 @@ import {
   ViewerOptions,
   Batch,
   BatchResponse,
+  BatchItem,
 } from "./models";
 import { appendUrlParam } from "./helpers/url";
-import {HTTPError} from "./helpers/httpError";
+import { HTTPError } from "./helpers/httpError";
 
 const LIMIT = 1000;
+const BATCH_SIZE = 25;
 
 /**
  * A class representing a basic client, which contains:
@@ -40,10 +42,10 @@ export default class ClientBase {
    */
   public fetch<T>(input: RequestInfo, init: RequestInit): Promise<T> {
     return this.fetchFunction(input, init).then((r: Response) => {
-      if (r.status < 400){
+      if (r.status < 400) {
         return r.json();
       }
-      return Promise.reject(new HTTPError(r))
+      return Promise.reject(new HTTPError(r));
     });
   }
 
@@ -128,14 +130,45 @@ export default class ClientBase {
     });
   }
 
+  private batchChunks<T>(array: Batch<T>, size: number = 25): Array<Batch<T>> {
+    var results: Array<Batch<T>> = [];
+    while (array.length) {
+      results.push(array.splice(0, size));
+    }
+    return results;
+  }
+
   /**
    * Batch operation
    */
-  public batch<T>(urlBase: string, resource: string, batch: Batch<T>): Promise<BatchResponse<T>> {
-    return this.fetch(`${urlBase}/v1/${resource}/batch`, {
-      method: "POST",
-      body: JSON.stringify(batch),
-    });
+  public async batch<T>(
+    urlBase: string,
+    resource: string,
+    batch: Batch<T>,
+    size: number = BATCH_SIZE,
+  ): Promise<BatchResponse<T>> {
+    const chunks = this.batchChunks(batch);
+    const result: BatchResponse<T> = [];
+    for (const chunk of chunks) {
+      let chunkResults: BatchResponse<T> = [];
+      try {
+        chunkResults = await this.fetch<BatchResponse<T>>(`${urlBase}/v1/${resource}/batch`, {
+          method: "POST",
+          body: JSON.stringify(chunk),
+        });
+      } catch (e) {
+        chunkResults = chunk.map((item: BatchItem<T>) => ({
+          status: {
+            code: e.status,
+            message: [e.message],
+          },
+          id: item.method != "POST" ? item.id : undefined,
+          data: item.method != "GET" ? item.data : undefined,
+        }));
+      }
+      result.push(...chunkResults);
+    } 
+    return Promise.resolve(result);
   }
 
   /*
@@ -177,7 +210,6 @@ export default class ClientBase {
     });
   }
   */
-
 
   /**
    * Returns current user object (viewer) instance

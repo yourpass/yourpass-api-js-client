@@ -7,6 +7,8 @@ import {
   Query,
   TemplateBase,
   Template,
+  Batch,
+  BatchResponse,
 } from "./models";
 import DefaultClient from "./ClientBase";
 
@@ -80,6 +82,18 @@ export default class CoreClient extends DefaultClient {
    */
   public passDelete(pass: UUID): Promise<Pass> {
     return this.delete<Pass>(this.urlBase, "pass", pass);
+  }
+
+  /**
+   *  Pass Batch
+   * @param batches
+   * @param batchSize
+   */
+  public passBatch(
+    batches: Batch<Pass>,
+    batchSize?: number,
+  ): Promise<BatchResponse<Pass>> {
+    return this.batch<Pass>(this.urlBase, "pass", batches, batchSize);
   }
 
   /**

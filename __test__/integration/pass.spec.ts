@@ -1,5 +1,6 @@
 import config, { enviroment } from "./config";
 import CoreClient, { Pass, List, UUID, createOAuthFetch } from "../../index";
+import { Batch, BatchResponse } from "../../src/models";
 const fetch = createOAuthFetch({
   ...config,
 });
@@ -27,4 +28,22 @@ describe("pass test", () => {
       done();
     }, done);
   });
+
+
+  it("batch reads", (done) => {
+    const batches:Batch<Pass> = [];
+    for (let i=0;i <100;i++){
+      batches.push({
+        method: 'GET',
+        id: testPassId, 
+      })
+    }
+
+    client.passBatch(batches).then((resp: BatchResponse<Pass>) => {
+      expect(resp.length).toEqual(100);
+      console.log(JSON.stringify(resp,null,4));  
+      done();
+    }, done);
+  });
+
 });
