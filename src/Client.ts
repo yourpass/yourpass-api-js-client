@@ -7,16 +7,17 @@ import {
   Query,
   TemplateBase,
   Template,
+  Batch,
+  BatchResponse,
 } from "./models";
-import DefaultClient from "./DefaultClient";
-import { API_URL } from "./constants/enviroments";
+import DefaultClient from "./ClientBase";
 
 /**
  * A class representing a core client. It prvides interface to work with Passes, Images and templates.
  */
 export default class CoreClient extends DefaultClient {
   public passList(query?: Query): Promise<List<PassBase>> {
-    return this.list<PassBase>(API_URL.CORE, "pass", query);
+    return this.list<PassBase>(this.urlBase, "pass", query);
   }
 
   /**
@@ -24,7 +25,7 @@ export default class CoreClient extends DefaultClient {
    * @param id pass id
    */
   public passGet(id: UUID): Promise<Pass> {
-    return this.get<Pass>(API_URL.CORE, "pass", id);
+    return this.get<Pass>(this.urlBase, "pass", id);
   }
 
   /**
@@ -36,7 +37,7 @@ export default class CoreClient extends DefaultClient {
     dynamicData?: any;
     dynamicImages?: ImageReferenceMap;
   }): Promise<Pass> {
-    return this.create<Pass>(API_URL.CORE, "pass", pass);
+    return this.create<Pass>(this.urlBase, "pass", pass);
   }
 
   /**
@@ -53,7 +54,7 @@ export default class CoreClient extends DefaultClient {
       voided?: boolean;
     },
   ): Promise<Pass> {
-    return this.patch<Pass>(API_URL.CORE, "pass", id, pass);
+    return this.patch<Pass>(this.urlBase, "pass", id, pass);
   }
 
   /**
@@ -67,7 +68,7 @@ export default class CoreClient extends DefaultClient {
     dynamicImages?: ImageReferenceMap;
     voided?: boolean;
   }): Promise<Pass> {
-    return this.update<Pass>(API_URL.CORE, "pass", pass.id, {
+    return this.update<Pass>(this.urlBase, "pass", pass.id, {
       templateId: pass.templateId,
       dynamicData: pass.dynamicData,
       dynamicImages: pass.dynamicImages,
@@ -80,7 +81,19 @@ export default class CoreClient extends DefaultClient {
    * @param pass
    */
   public passDelete(pass: UUID): Promise<Pass> {
-    return this.delete<Pass>(API_URL.CORE, "pass", pass);
+    return this.delete<Pass>(this.urlBase, "pass", pass);
+  }
+
+  /**
+   *  Pass Batch
+   * @param batches
+   * @param batchSize
+   */
+  public passBatch(
+    batches: Batch<Pass>,
+    batchSize?: number,
+  ): Promise<BatchResponse<Pass>> {
+    return this.batch<Pass>(this.urlBase, "pass", batches, batchSize);
   }
 
   /**
@@ -88,7 +101,7 @@ export default class CoreClient extends DefaultClient {
    * @param query
    */
   public templateList(query?: Query): Promise<List<TemplateBase>> {
-    return this.list<TemplateBase>(API_URL.CORE, "template", query);
+    return this.list<TemplateBase>(this.urlBase, "template", query);
   }
 
   /**
@@ -96,6 +109,6 @@ export default class CoreClient extends DefaultClient {
    * @param id pass id
    */
   public templateGet(id: UUID): Promise<Template> {
-    return this.get<Template>(API_URL.CORE, "template", id);
+    return this.get<Template>(this.urlBase, "template", id);
   }
 }

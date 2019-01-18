@@ -1,25 +1,35 @@
 import { UUID } from "./uuid";
 
 interface CreateBatchItem<T> {
-    type: 'POST';
-    data: T;
-} 
-
-interface OtherBatchItem<T> {
-    type: 'GET' | 'PUT' | 'DELETE' | 'PATCH';
-    id: UUID
-    data: T;
-} 
-
-export interface BatchResponse<T> {
-    status: {
-        "code": number,
-        "message": string
-      },
-    data: T
+  method: "POST";
+  data: T;
 }
 
+interface GetBatchItem<T> {
+  method: "GET";
+  id: UUID;
+}
 
-export type BatchItem<T> = CreateBatchItem<T> | OtherBatchItem<T>
+interface OtherBatchItem<T> {
+  method: "PUT" | "DELETE" | "PATCH";
+  id: UUID;
+  data: T;
+}
 
-export type Batch<T> = Array<BatchItem<T>>
+export interface BatchResponseItem<T> {
+  status: {
+    code: number;
+    message: string[];
+  };
+  id?: UUID;
+  data?: T;
+}
+
+export type BatchResponse<T> = Array<BatchResponseItem<T>>;
+
+export type BatchItem<T> =
+  | CreateBatchItem<T>
+  | OtherBatchItem<T>
+  | GetBatchItem<T>;
+
+export type Batch<T> = Array<BatchItem<T>>;

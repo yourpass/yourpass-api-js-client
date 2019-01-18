@@ -10,33 +10,23 @@
 
 ### Properties
 
-* [authUrl](_src_fetch_oauth_oauthfetch_.oauthoptions.md#authurl)
 * [clientId](_src_fetch_oauth_oauthfetch_.oauthoptions.md#clientid)
 * [clientSecret](_src_fetch_oauth_oauthfetch_.oauthoptions.md#clientsecret)
 * [password](_src_fetch_oauth_oauthfetch_.oauthoptions.md#password)
+* [url](_src_fetch_oauth_oauthfetch_.oauthoptions.md#url)
 * [username](_src_fetch_oauth_oauthfetch_.oauthoptions.md#username)
 
 ---
 
 ## Properties
 
-<a id="authurl"></a>
-
-### `<Optional>` authUrl
-
-**● authUrl**: * `undefined` &#124; `string`
-*
-
-*Defined in [src/fetch/oauth/OAuthFetch.ts:20](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L20)*
-
-___
 <a id="clientid"></a>
 
 ###  clientId
 
 **● clientId**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L16)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L13)*
 
 ___
 <a id="clientsecret"></a>
@@ -45,7 +35,7 @@ ___
 
 **● clientSecret**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L17)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L14)*
 
 ___
 <a id="password"></a>
@@ -54,7 +44,16 @@ ___
 
 **● password**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:19](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L19)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L16)*
+
+___
+<a id="url"></a>
+
+###  url
+
+**● url**: *`string`*
+
+*Defined in [src/fetch/oauth/OAuthFetch.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L17)*
 
 ___
 <a id="username"></a>
@@ -63,7 +62,7 @@ ___
 
 **● username**: *`string`*
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:18](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L18)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L15)*
 
 ___
 

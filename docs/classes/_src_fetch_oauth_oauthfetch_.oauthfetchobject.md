@@ -14,11 +14,11 @@
 
 ### Properties
 
-* [authUrl](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#authurl)
 * [clientId](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#clientid)
 * [clientSecret](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#clientsecret)
 * [password](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#password)
 * [token](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#token)
+* [url](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#url)
 * [username](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md#username)
 
 ### Methods
@@ -35,15 +35,15 @@
 
 ###  constructor
 
-⊕ **new OAuthFetchObject**(opts?: *[OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md)*): [OAuthFetchObject](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md)
+⊕ **new OAuthFetchObject**(opts: *[OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md)*): [OAuthFetchObject](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md)
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:29](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L29)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:26](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L26)*
 
 **Parameters:**
 
 | Name | Type |
 | ------ | ------ |
-| `Optional` opts | [OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md) |
+| opts | [OAuthOptions](../interfaces/_src_fetch_oauth_oauthfetch_.oauthoptions.md) |
 
 **Returns:** [OAuthFetchObject](_src_fetch_oauth_oauthfetch_.oauthfetchobject.md)
 
@@ -51,15 +51,6 @@ ___
 
 ## Properties
 
-<a id="authurl"></a>
-
-### `<Private>` authUrl
-
-**● authUrl**: *`string`*
-
-*Defined in [src/fetch/oauth/OAuthFetch.ts:28](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L28)*
-
-___
 <a id="clientid"></a>
 
 ### `<Private>``<Optional>` clientId
@@ -67,7 +58,7 @@ ___
 **● clientId**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:26](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L26)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:23](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L23)*
 
 ___
 <a id="clientsecret"></a>
@@ -77,7 +68,7 @@ ___
 **● clientSecret**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:27](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L27)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L24)*
 
 ___
 <a id="password"></a>
@@ -87,7 +78,7 @@ ___
 **● password**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:25](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L25)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:22](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L22)*
 
 ___
 <a id="token"></a>
@@ -96,7 +87,16 @@ ___
 
 **● token**: *[OAuthToken](_src_fetch_oauth_oauthtoken_.oauthtoken.md)*
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:29](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L29)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:26](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L26)*
+
+___
+<a id="url"></a>
+
+### `<Private>` url
+
+**● url**: *`string`*
+
+*Defined in [src/fetch/oauth/OAuthFetch.ts:25](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L25)*
 
 ___
 <a id="username"></a>
@@ -106,7 +106,7 @@ ___
 **● username**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L24)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:21](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L21)*
 
 ___
 
@@ -118,7 +118,7 @@ ___
 
 ▸ **fetch**(input: *`RequestInfo`*, init: * `RequestInit` &#124; `undefined`*): `Promise`<`Response`>
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:69](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L69)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:64](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L64)*
 
 **Parameters:**
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **fetchToken**(username: *`string`*, password: *`string`*): `Promise`<[OAuthToken](_src_fetch_oauth_oauthtoken_.oauthtoken.md)>
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:41](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L41)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:36](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L36)*
 
 **Parameters:**
 
@@ -154,7 +154,7 @@ ___
 
 ▸ **getToken**(): `Promise`< [OAuthToken](_src_fetch_oauth_oauthtoken_.oauthtoken.md) &#124; `undefined`>
 
-*Defined in [src/fetch/oauth/OAuthFetch.ts:84](https://github.com/yourpass/yourpass-api-js-client/blob/282d6a3/src/fetch/oauth/OAuthFetch.ts#L84)*
+*Defined in [src/fetch/oauth/OAuthFetch.ts:79](https://github.com/yourpass/yourpass-api-js-client/blob/b65bebe/src/fetch/oauth/OAuthFetch.ts#L79)*
 
 **Returns:** `Promise`< [OAuthToken](_src_fetch_oauth_oauthtoken_.oauthtoken.md) &#124; `undefined`>
 

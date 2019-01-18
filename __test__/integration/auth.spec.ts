@@ -1,4 +1,4 @@
-import config from "./config";
+import config, { enviroment } from "./config";
 import CoreApiClient, {
   createOAuthFetch,
   Fetch,
@@ -6,7 +6,6 @@ import CoreApiClient, {
   createHeaderTokenFetch,
   OAuthFetchObject,
 } from "../../index";
-import {} from "../../src/fetch";
 import { Viewer } from "../../src/models";
 import { HTTPError } from "../../src/helpers/httpError";
 
@@ -93,6 +92,7 @@ describe("OAuth test", () => {
   it("get viewer", (done: jest.DoneCallback) => {
     const client: CoreApiClient = new CoreApiClient({
       fetch: oauthFetchInstance,
+      ...enviroment,
     });
     client.getViewer().then((v: Viewer) => {
       done();
@@ -104,6 +104,7 @@ describe("OAuth test", () => {
     c.password = "";
     const client: CoreApiClient = new CoreApiClient({
       fetch: createOAuthFetch(c),
+      ...enviroment,
     });
 
     client.getViewer().then(done, checkError("Unauthorized", done));
@@ -120,6 +121,7 @@ describe("header token fetch", () => {
     });
     const client: CoreApiClient = new CoreApiClient({
       fetch: tokenFetch,
+      ...enviroment,
     });
 
     client.getViewer().then((v: Viewer) => {
@@ -133,6 +135,7 @@ describe("header token fetch", () => {
     });
     const client: CoreApiClient = new CoreApiClient({
       fetch: tokenFetch,
+      ...enviroment,
     });
 
     client.getViewer().then(done, checkError("Unauthorized", done));

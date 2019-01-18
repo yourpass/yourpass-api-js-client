@@ -1,8 +1,7 @@
-import DefaultClient from "./src/DefaultClient";
-import CoreClient from "./src/CoreClient";
+import ClientBase from "./src/ClientBase";
+import Client from "./src/Client";
 export * from "./src/models/index";
 export * from "./src/fetch/index";
-export * from "./src/constants/enviroments";
 export * from "./src/helpers/httpError";
-export default CoreClient;
-export { DefaultClient, CoreClient };
+export default Client;
+export { Client, ClientBase };
