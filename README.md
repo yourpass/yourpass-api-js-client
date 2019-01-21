@@ -91,14 +91,13 @@ Code bellow switch template and update loyalty points
 
 ```javascript
 conts patch = {
-  id: "passId",
   templateId: "someTemplateId2",
   dynamicData: {
     loyaltyPoints: 20
   }
 }
 
-client.passPatch(patch).then((response) => {
+client.passPatch(passId, patch).then((response) => {
   console.log(response);
 });
 ```
