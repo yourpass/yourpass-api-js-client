@@ -1,0 +1,15 @@
+.DS_Store
+.idea/
+docs/
+node_modules/
+npm-debug.log
+test/
+src/
+.env
+.gitignore
+.prettierrc
+index.ts
+jest.config.js
+tsconfig.json
+tslint.json
+.editorconfig
