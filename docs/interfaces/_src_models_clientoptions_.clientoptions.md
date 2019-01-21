@@ -23,7 +23,7 @@
 
 **● fetch**: *[Fetch](../modules/_src_fetch_fetch_.md#fetch)*
 
-*Defined in [src/models/clientOptions.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/clientOptions.ts#L4)*
+*Defined in [src/models/clientOptions.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/clientOptions.ts#L4)*
 
 ___
 <a id="urlbase"></a>
@@ -32,7 +32,7 @@ ___
 
 **● urlBase**: *`string`*
 
-*Defined in [src/models/clientOptions.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/clientOptions.ts#L5)*
+*Defined in [src/models/clientOptions.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/clientOptions.ts#L5)*
 
 ___
 

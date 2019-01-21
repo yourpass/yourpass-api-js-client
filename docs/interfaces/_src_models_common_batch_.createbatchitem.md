@@ -25,7 +25,7 @@
 
 **● data**: *`T`*
 
-*Defined in [src/models/common/batch.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/common/batch.ts#L5)*
+*Defined in [src/models/common/batch.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/common/batch.ts#L5)*
 
 ___
 <a id="method"></a>
@@ -34,7 +34,7 @@ ___
 
 **● method**: *"POST"*
 
-*Defined in [src/models/common/batch.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/2b1e25c/src/models/common/batch.ts#L4)*
+*Defined in [src/models/common/batch.ts:4](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/common/batch.ts#L4)*
 
 ___
 
