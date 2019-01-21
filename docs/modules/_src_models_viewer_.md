@@ -31,7 +31,7 @@
 
 ▸ **match**(current: *`number`*, rights: *[Permission](../enums/_src_models_viewer_.permission.md)*): `boolean`
 
-*Defined in [src/models/viewer.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/viewer.ts#L24)*
+*Defined in [src/models/viewer.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/viewer.ts#L24)*
 
 **Parameters:**
 

@@ -18,9 +18,9 @@
 
 ### `<Const>` client
 
-**● client**: *[CoreClient](../classes/_src_client_.coreclient.md)* =  new Client({ fetch, ...enviroment })
+**● client**: *[CoreClient](../classes/_src_coreclient_.coreclient.md)* =  new Client({ fetch, ...enviroment })
 
-*Defined in [__test__/integration/template.spec.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/template.spec.ts#L15)*
+*Defined in [__test__/integration/template.spec.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/template.spec.ts#L15)*
 
 ___
 <a id="fetch"></a>
@@ -31,7 +31,7 @@ ___
   ...config,
 })
 
-*Defined in [__test__/integration/template.spec.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/template.spec.ts#L9)*
+*Defined in [__test__/integration/template.spec.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/template.spec.ts#L9)*
 
 #### Type declaration
 ▸(input: *`RequestInfo`*, init?: *`RequestInit`*): `Promise`<`Response`>
@@ -52,7 +52,7 @@ ___
 
 **● testTemplateId**: *[UUID](_src_models_common_uuid_.md#uuid)*
 
-*Defined in [__test__/integration/template.spec.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/template.spec.ts#L13)*
+*Defined in [__test__/integration/template.spec.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/template.spec.ts#L13)*
 
 ___
 

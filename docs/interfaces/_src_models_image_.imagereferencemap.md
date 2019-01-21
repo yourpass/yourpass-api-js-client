@@ -26,7 +26,7 @@
 
 **● footer**: *[ImageReference](../modules/_src_models_image_.md#imagereference)*
 
-*Defined in [src/models/image.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/image.ts#L14)*
+*Defined in [src/models/image.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/image.ts#L14)*
 
 ___
 <a id="icon"></a>
@@ -35,7 +35,7 @@ ___
 
 **● icon**: *[ImageReference](../modules/_src_models_image_.md#imagereference)*
 
-*Defined in [src/models/image.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/image.ts#L11)*
+*Defined in [src/models/image.ts:11](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/image.ts#L11)*
 
 ___
 <a id="logo"></a>
@@ -44,7 +44,7 @@ ___
 
 **● logo**: *[ImageReference](../modules/_src_models_image_.md#imagereference)*
 
-*Defined in [src/models/image.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/image.ts#L10)*
+*Defined in [src/models/image.ts:10](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/image.ts#L10)*
 
 ___
 <a id="strip"></a>
@@ -53,7 +53,7 @@ ___
 
 **● strip**: *[ImageReference](../modules/_src_models_image_.md#imagereference)*
 
-*Defined in [src/models/image.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/image.ts#L12)*
+*Defined in [src/models/image.ts:12](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/image.ts#L12)*
 
 ___
 <a id="thumbnail"></a>
@@ -62,7 +62,7 @@ ___
 
 **● thumbnail**: *[ImageReference](../modules/_src_models_image_.md#imagereference)*
 
-*Defined in [src/models/image.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/src/models/image.ts#L13)*
+*Defined in [src/models/image.ts:13](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/image.ts#L13)*
 
 ___
 

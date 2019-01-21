@@ -19,7 +19,7 @@
 
 **credentials**: *`object`*
 
-*Defined in [__test__/integration/config.ts:27](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L27)*
+*Defined in [__test__/integration/config.ts:27](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L27)*
 
 <a id="credentials.clientid"></a>
 
@@ -27,7 +27,7 @@
 
 **● clientId**: *`string`* =  process.env.TEST_CLIENT_ID
 
-*Defined in [__test__/integration/config.ts:28](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L28)*
+*Defined in [__test__/integration/config.ts:28](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L28)*
 
 ___
 <a id="credentials.clientsecret"></a>
@@ -36,7 +36,7 @@ ___
 
 **● clientSecret**: *`string`* =  process.env.TEST_CLIENT_SECRET
 
-*Defined in [__test__/integration/config.ts:29](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L29)*
+*Defined in [__test__/integration/config.ts:29](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L29)*
 
 ___
 <a id="credentials.password"></a>
@@ -45,7 +45,7 @@ ___
 
 **● password**: *`string`* =  process.env.TEST_PASSWORD
 
-*Defined in [__test__/integration/config.ts:31](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L31)*
+*Defined in [__test__/integration/config.ts:31](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L31)*
 
 ___
 <a id="credentials.url"></a>
@@ -54,7 +54,7 @@ ___
 
 **● url**: *`string`* =  process.env.TEST_API_URL
 
-*Defined in [__test__/integration/config.ts:32](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L32)*
+*Defined in [__test__/integration/config.ts:32](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L32)*
 
 ___
 <a id="credentials.username"></a>
@@ -63,7 +63,7 @@ ___
 
 **● username**: *`string`* =  process.env.TEST_USERNAME
 
-*Defined in [__test__/integration/config.ts:30](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L30)*
+*Defined in [__test__/integration/config.ts:30](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L30)*
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 **enviroment**: *`object`*
 
-*Defined in [__test__/integration/config.ts:23](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L23)*
+*Defined in [__test__/integration/config.ts:23](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L23)*
 
 <a id="enviroment.urlbase"></a>
 
@@ -82,7 +82,7 @@ ___
 
 **● urlBase**: *`string`* =  process.env.TEST_API_URL
 
-*Defined in [__test__/integration/config.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/da1be9c/__test__/integration/config.ts#L24)*
+*Defined in [__test__/integration/config.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/__test__/integration/config.ts#L24)*
 
 ___
 

@@ -13,3 +13,5 @@ jest.config.js
 tsconfig.json
 tslint.json
 .editorconfig
+*.csv
+*.sh
