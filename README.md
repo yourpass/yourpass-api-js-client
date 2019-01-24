@@ -4,7 +4,7 @@ The Client Library for JavaScript/Typescript is designed for client-application 
 
 ### About Yourpass
 
-[Yourpass](https://yourpass.eu/) is a platform to create digital cards for mobile wallet.
+[Yourpass](https://yourpass.eu/) is a platform to create digital cards for mobile wallet in Pkpass and Google Pay format.
 
 ## Installation
 
