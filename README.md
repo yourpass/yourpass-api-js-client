@@ -1,10 +1,18 @@
 # Yourpass Javascript/Typescript client library
 
-The Client Library for JavaScript/Typescript is designed for client-application developers. It offers simple, flexible access to [Yourpass API](https://doc.yourpass.eu/)
+This JavaScript/Typescript Client Library helps to develop  client-application integration with Yourpass API. It offers simple, flexible and easy to use [Yourpass API](https://doc.yourpass.eu/).
 
 ### About Yourpass
 
-[Yourpass](https://yourpass.eu/) is a platform to create digital cards for mobile wallet in Pkpass and Google Pay format.
+[Yourpass](https://www.yourpass.eu/) is a platform and service for creating digital cards for mobile wallets in PKPASS and Google Pay formats.
+
+![Yourpass Use cases](yourpass.png)
+
+If You do not know what is Yourpass please visit [Yourpass web site](https://www.yourpass.eu) for more information.
+
+### Before you start
+
+Before start you need to have Yourpass account. If you do not have Yourpass account go to [Yourpass Registration](https://https://login.yourpass.eu/?signup).
 
 ## Installation
 
@@ -14,14 +22,21 @@ npm install @yourpass/api-js-client --save
 
 ## Usage
 
-This chapter describe basic usage of client. You can find more examples [here](/examples).
+This chapter describes basic usage of client. You can find more examples [here](/examples).
 
 ### Create OAuth2 client
 
-This code below describe, how create client, which is connected in to API via OAuth2.
+First, you have to create client and authenticate using OAuth2.
+
+For authentication You need:
+
+* clientId: OAuth client id. You can get it on [Yourpass Console Profile Page](https://console.yourpass.eu/user/detail).
+* clientSecret: OAuth client secret. You can get it on [Yourpass Console Profile Page](https://console.yourpass.eu/user/detail)
+* username: Your Yourpass account username
+* password: Your Yourpass account password
 
 ```javascript
-import { Client, createOAuthFetch } from "dist/index.js";
+import { Client, createOAuthFetch } from "@yourpass/api-js-client";
 
 const productionUrlBase = "https://api.yourpass.eu";
 
@@ -38,7 +53,7 @@ const client = new CoreClient({ fetch, urlBase: productionUrlBase });
 
 ### Pass listing
 
-Code below shows how we can use client for listing passes.
+Use the following code to get list of digital passes:
 
 ```javascript
 client.passList({ limit: 3 }).then((response) => {
@@ -48,7 +63,7 @@ client.passList({ limit: 3 }).then((response) => {
 
 ### Pass create
 
-Code below shows how to create new pass.
+Use the following code to create a new pass:
 
 ```javascript
 conts pass = {
@@ -67,7 +82,7 @@ client.passCreate(pass).then((response) => {
 
 ### Pass update
 
-Code below shows how to update new pass.
+Use the following code to update a pass:
 
 ```javascript
 conts pass = {
@@ -87,7 +102,7 @@ client.passUpdate(pass).then((response) => {
 
 ### Pass patch
 
-Code bellow switch template and update loyalty points
+Use the following code to patch the pass, eg. change pass template and update loyalty points:
 
 ```javascript
 conts patch = {
@@ -104,8 +119,9 @@ client.passPatch(passId, patch).then((response) => {
 
 ## Documentation
 
-For more details please visit ["generated TypeDoc documentation"](docs/).
-For more information about API see [Yourpass API](https://doc.yourpass.eu/)
+See Yourpass Client [generated TypeDoc documentation](docs/).
+
+For more information about API please visit [Yourpass API](https://doc.yourpass.eu/).
 
 ## Development
 
