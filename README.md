@@ -22,7 +22,7 @@ npm install @yourpass/api-js-client --save
 
 ## Usage
 
-This chapter describes basic usage of client. You can find more examples [here](/examples).
+This chapter describes basic usage of the client library. You can find more examples [here](/examples).
 
 ### Create OAuth2 client
 
@@ -30,8 +30,8 @@ First, you have to create client and authenticate using OAuth2.
 
 For authentication You need:
 
-* clientId: OAuth client id. You can get it on [Yourpass Console Profile Page](https://console.yourpass.eu/user/detail).
-* clientSecret: OAuth client secret. You can get it on [Yourpass Console Profile Page](https://console.yourpass.eu/user/detail)
+* clientId: OAuth client id. You can find the clientId on [Yourpass API Documentation](https://doc.yourpass.eu). If You want your own clientId and clientSecret, please [contact us](https://www.yourpass.eu).
+* clientSecret: OAuth client secret. You can get it on [Yourpass API Documentation](https://doc.yourpass.eu).
 * username: Your Yourpass account username
 * password: Your Yourpass account password
 
