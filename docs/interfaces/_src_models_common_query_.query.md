@@ -31,7 +31,7 @@
 **● limit**: * `undefined` &#124; `number`
 *
 
-*Defined in [src/models/common/query.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/query.ts#L9)*
+*Defined in [src/models/common/query.ts:9](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/query.ts#L9)*
 
 ___
 <a id="order"></a>
@@ -40,7 +40,7 @@ ___
 
 **● order**: *[Order](../enums/_src_models_common_order_.order.md)*
 
-*Defined in [src/models/common/query.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/query.ts#L6)*
+*Defined in [src/models/common/query.ts:6](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/query.ts#L6)*
 
 ___
 <a id="orderby"></a>
@@ -50,7 +50,7 @@ ___
 **● orderBy**: * `undefined` &#124; `string`
 *
 
-*Defined in [src/models/common/query.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/query.ts#L7)*
+*Defined in [src/models/common/query.ts:7](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/query.ts#L7)*
 
 ___
 <a id="page"></a>
@@ -60,7 +60,7 @@ ___
 **● page**: * `undefined` &#124; `number`
 *
 
-*Defined in [src/models/common/query.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/query.ts#L8)*
+*Defined in [src/models/common/query.ts:8](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/query.ts#L8)*
 
 ___
 <a id="where"></a>
@@ -69,7 +69,7 @@ ___
 
 **● where**: *[Where](../modules/_src_models_common_where_.md#where)*
 
-*Defined in [src/models/common/query.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/query.ts#L5)*
+*Defined in [src/models/common/query.ts:5](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/query.ts#L5)*
 
 ___
 

@@ -26,7 +26,7 @@
 
 **● data**: *`T`*
 
-*Defined in [src/models/common/batch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/batch.ts#L16)*
+*Defined in [src/models/common/batch.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/batch.ts#L16)*
 
 ___
 <a id="id"></a>
@@ -35,7 +35,7 @@ ___
 
 **● id**: *[UUID](../modules/_src_models_common_uuid_.md#uuid)*
 
-*Defined in [src/models/common/batch.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/batch.ts#L15)*
+*Defined in [src/models/common/batch.ts:15](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/batch.ts#L15)*
 
 ___
 <a id="method"></a>
@@ -45,7 +45,7 @@ ___
 **● method**: * "PUT" &#124; "DELETE" &#124; "PATCH"
 *
 
-*Defined in [src/models/common/batch.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/common/batch.ts#L14)*
+*Defined in [src/models/common/batch.ts:14](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/common/batch.ts#L14)*
 
 ___
 

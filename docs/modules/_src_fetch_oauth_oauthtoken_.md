@@ -27,7 +27,7 @@
 
 **● REFRESH_INTERVAL**: *`number`* =  120 * 1000
 
-*Defined in [src/fetch/oauth/OAuthToken.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/fetch/oauth/OAuthToken.ts#L17)*
+*Defined in [src/fetch/oauth/OAuthToken.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/fetch/oauth/OAuthToken.ts#L17)*
 
 ___
 

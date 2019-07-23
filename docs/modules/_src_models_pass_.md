@@ -23,7 +23,7 @@
 
 **Ƭ Pass**: *[PassBase](../interfaces/_src_models_pass_.passbase.md)*
 
-*Defined in [src/models/pass.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/models/pass.ts#L24)*
+*Defined in [src/models/pass.ts:24](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/models/pass.ts#L24)*
 
 ___
 

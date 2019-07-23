@@ -18,7 +18,7 @@
 
 **Ƭ Fetch**: *`function`*
 
-*Defined in [src/fetch/Fetch.ts:1](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/fetch/Fetch.ts#L1)*
+*Defined in [src/fetch/Fetch.ts:1](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/fetch/Fetch.ts#L1)*
 
 #### Type declaration
 ▸(input: *`RequestInfo`*, init?: *`RequestInit`*): `Promise`<`Response`>

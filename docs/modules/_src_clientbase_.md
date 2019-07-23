@@ -23,7 +23,7 @@
 
 **● BATCH_SIZE**: *`25`* = 25
 
-*Defined in [src/ClientBase.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/ClientBase.ts#L17)*
+*Defined in [src/ClientBase.ts:17](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/ClientBase.ts#L17)*
 
 ___
 <a id="limit"></a>
@@ -32,7 +32,7 @@ ___
 
 **● LIMIT**: *`1000`* = 1000
 
-*Defined in [src/ClientBase.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/6ee4079/src/ClientBase.ts#L16)*
+*Defined in [src/ClientBase.ts:16](https://github.com/yourpass/yourpass-api-js-client/blob/b6d366f/src/ClientBase.ts#L16)*
 
 ___
 
