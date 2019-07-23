@@ -34,7 +34,19 @@ export class OAuthFetchObject {
   }
 
   public fetchToken(username: string, password: string): Promise<OAuthToken> {
-    const body = `grant_type=password&username=${username}&password=${password}`;
+    
+    const params: any = {
+      grant_type: "password",
+      username,
+      password,
+    };
+
+    const body = Object.keys(params)
+      .map((key) => {
+        return encodeURIComponent(key) + "=" + encodeURIComponent(params[key]);
+      })
+      .join("&");
+
     const auth = "Basic " + btoa(this.clientId + ":" + this.clientSecret);
     const headers = {
       ...DEFAULT_HEADERS,
@@ -46,7 +58,7 @@ export class OAuthFetchObject {
       headers,
     }).then((resp: any) => {
       if (resp.status === 200) {
-        return resp.json().then((json: OAuthTokenResponse) => {         
+        return resp.json().then((json: OAuthTokenResponse) => {
           if (json.access_token && json.expires_in && json.token_type) {
             return new OAuthToken({
               accessToken: json.access_token,
