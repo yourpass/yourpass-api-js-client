@@ -1,6 +1,6 @@
 {
   "name": "@yourpass/api-js-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yourpass Javascript/Typescript client",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
